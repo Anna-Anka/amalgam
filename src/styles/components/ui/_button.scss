@@ -21,7 +21,9 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: var(--color-orange-200);
+			border-color: var(--color-orange-200);
+			color: var(--color-orange-500);
+			background-color: var(--color-white);
 		}
 	}
 

@@ -5,7 +5,7 @@
 }
 
 @mixin flex-alignment(
-	$gap: 20px,
+	$gap: 30px,
 	$justify: center,
 	$align: center,
 	$direction: row
@@ -17,7 +17,7 @@
 	gap: $gap;
 }
 
-@mixin flex-simple($gap: 20px, $direction: row) {
+@mixin flex-simple($gap: 30px, $direction: row) {
 	display: flex;
 	flex-direction: $direction;
 	gap: $gap;

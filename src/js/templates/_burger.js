@@ -35,6 +35,7 @@ import { disableScroll, enableScroll } from '../utils/index.js';
     });
 
     overlay.addEventListener('click', () => {
+        console.log('overlay click')
         hideBurger();
         checkClass();
     });
@@ -72,4 +73,4 @@ import { disableScroll, enableScroll } from '../utils/index.js';
             }
         }
     }
-})
+}())

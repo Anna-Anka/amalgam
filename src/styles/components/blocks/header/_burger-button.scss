@@ -2,19 +2,26 @@
 	--burger-width: 30px;
 	--burger-height: 30px;
 	--burger-line-height: 2px;
-	--burger-border-radius: 0;
-	--burger-color: var(--color-black);
+	--burger-border-radius: 4px;
+	--burger-color: var(--color-blue-300);
 
 	position: relative;
+	right: 0;
+	top: 0;
+	border-radius: var(--burger-border-radius);
 	width: var(--burger-width);
 	height: var(--burger-height);
 	color: var(--burger-color);
+	transition:
+		top 0.4s,
+		right 0.4s;
 
 	&::before,
 	&::after {
 		content: '';
 		position: absolute;
 		left: 0;
+		border-radius: inherit;
 		width: 100%;
 		height: var(--burger-line-height);
 		background-color: currentcolor;
@@ -31,7 +38,7 @@
 		top: calc(100% - var(--burger-line-height));
 	}
 
-	@include mq(lg, min) {
+	@include mq(xl, min) {
 		display: none;
 	}
 
@@ -47,6 +54,11 @@
 	}
 
 	&--active {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		z-index: 50;
+
 		&::before,
 		&::after {
 			top: 50%;
