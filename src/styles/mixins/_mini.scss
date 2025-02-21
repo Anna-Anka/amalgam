@@ -23,6 +23,12 @@
 	gap: $gap;
 }
 
+@mixin grid($columns, $gap: 30px) {
+	display: grid;
+	grid-template-columns: $columns;
+	gap: $gap;
+}
+
 @mixin resize-img {
 	position: absolute;
 	inset: 0;
