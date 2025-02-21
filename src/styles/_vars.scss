@@ -1,7 +1,19 @@
 :root {
 	--color-white: #fff;
 	--color-black: #000;
-	--font-main: 'Roboto';
+	--color-orange-500: #f7620f;
+	--color-orange-200: #cc8259;
+	--color-orange-100: #ffd1b8;
+	--color-orange-50: #fef7f3;
+	--color-blue-300: #40444e;
+	--color-blue-200: #545862;
+	--color-blue-100: #e8e8e8;
+	--color-blue-70: #c1cad2;
+	--color-blue-50: #f0f3f5; // порпобовать объединить с color-grey-50
+	--color-grey-200: #8d8e8f;
+	--color-grey-50: #fafafa;
+	--font-main: 'Onset';
+	--font-secondary: 'Formular';
 	--dvh: 100vh;
 	--full-screen: calc(var(--dvh) * 100);
 }
