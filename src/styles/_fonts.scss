@@ -1,7 +1,8 @@
 @mixin font-face($font-family, $url, $weight) {
 	@font-face {
 		font-family: '#{$font-family}';
-		src: url('../fonts/#{$url}.woff2') format('woff2'),
+		src:
+			url('../fonts/#{$url}.woff2') format('woff2'),
 			url('../fonts/#{$url}.woff') format('woff');
 		font-weight: #{$weight};
 		font-display: swap;
@@ -9,10 +10,12 @@
 	}
 }
 
-//Arimo
-//@include font-face(Arimo, Arimo-Regular, 400);
-//@include font-face(Arimo, Arimo-Medium, 500);
-//@include font-face(Arimo, Arimo-SemiBold, 700);
-//@include font-face(Arimo, Arimo-Bold, 700);
-//@include font-face(Arimo, Arimo-ExtraBold, 800);
-//@include font-face(Arimo, Arimo-Black, 900);
+// Formular
+@include font-face(Formular, Formular-Regular, 400);
+@include font-face(Formular, Formular-Medium, 500);
+@include font-face(Formular, Formular-Bold, 700);
+
+// Onset
+@include font-face(Onset, Onset-Regular, 400);
+@include font-face(Onset, Onset-Medium, 500);
+@include font-face(Onset, Onset-SemiBold, 600);
