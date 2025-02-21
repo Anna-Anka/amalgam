@@ -1,6 +1,7 @@
 .burger-button {
+	--burger-width-button: 44px;
+	--burger-height-button: 44px;
 	--burger-width: 30px;
-	--burger-height: 30px;
 	--burger-line-height: 2px;
 	--burger-border-radius: 4px;
 	--burger-color: var(--color-blue-300);
@@ -9,8 +10,8 @@
 	right: 0;
 	top: 0;
 	border-radius: var(--burger-border-radius);
-	width: var(--burger-width);
-	height: var(--burger-height);
+	width: var(--burger-width-button);
+	height: var(--burger-height-button);
 	color: var(--burger-color);
 	transition:
 		top 0.4s,
@@ -22,7 +23,7 @@
 		position: absolute;
 		left: 0;
 		border-radius: inherit;
-		width: 100%;
+		width: var(--burger-width);
 		height: var(--burger-line-height);
 		background-color: currentcolor;
 		transition:
@@ -31,11 +32,11 @@
 	}
 
 	&::before {
-		top: 0;
+		top: 13px;
 	}
 
 	&::after {
-		top: calc(100% - var(--burger-line-height));
+		top: 30px;
 	}
 
 	@include mq(xl, min) {
@@ -46,7 +47,7 @@
 		position: absolute;
 		left: 0;
 		top: 50%;
-		width: 100%;
+		width: var(--burger-width);
 		height: var(--burger-line-height);
 		background-color: currentcolor;
 		transform: translateY(-50%);
