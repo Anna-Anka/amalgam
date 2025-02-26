@@ -1,0 +1,93 @@
+.promo {
+	padding: 40px 0;
+	color: var(--color-white);
+	background-color: var(--color-orange-500);
+
+	&__wrapper {
+		@include mq(lg, min) {
+			position: relative;
+			padding-left: 140px;
+		}
+
+		&::before {
+			@include mq(lg, min) {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100px;
+				height: 114px;
+				background-image: url('../img/decor/application.svg');
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 16px;
+		font-family: var(--font-secondary);
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 1.3;
+
+		@include mq(lg) {
+			font-size: 20px;
+		}
+	}
+
+	.form {
+		padding: 0;
+		background-color: transparent;
+		gap: 12px;
+
+		&__body {
+			@include mq(md, min) {
+				flex-direction: row;
+			}
+		}
+
+		&__items {
+			display: flex;
+			flex-basis: 75%;
+			gap: 16px;
+
+			@include mq(sm) {
+				flex-basis: 100%;
+				flex-direction: column;
+			}
+		}
+
+		&__field {
+			border-color: var(--color-orange-200);
+			background-color: var(--color-orange-100);
+
+			&::placeholder {
+				color: var(--color-orange-200);
+			}
+		}
+
+		&__button {
+			flex-basis: 25%;
+			border-radius: 8px;
+			color: var(--color-blue-300);
+			background-color: var(--color-white);
+		}
+
+		&__subtext {
+			font-size: 12px;
+			line-height: 1.3;
+			color: var(--color-orange-100);
+
+			a {
+				&:focus-visible {
+					box-shadow: 0 0 0 1px var(--color-white);
+				}
+
+				@media (any-hover: hover) {
+					&:hover {
+						color: var(--color-white);
+					}
+				}
+			}
+		}
+	}
+}
