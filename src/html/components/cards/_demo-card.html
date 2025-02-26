@@ -1,0 +1,19 @@
+<article class="demo-card">
+    <div class="demo-card__image">
+        <img src="img/blocks/@img.svg" alt="@alt" loading="lazy">
+    </div>
+    @if(typeof title !== 'undefined' && title) {
+    <h3 class="demo-card__title subtitle">@title</h3>
+    }
+    @if(typeof text !== 'undefined' && text) {
+    <div class="demo-card__text">
+        @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+    </div>
+    }
+    @if(typeof list !== 'undefined' && list) {
+    <ul class="demo-card__items">
+        @for (var i = 0; i < items.length; i++) { <li class="demo-card__item"> `+items[i]+` </li>
+            }
+    </ul>
+    }
+</article>

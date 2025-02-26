@@ -1,0 +1,13 @@
+.demo {
+	&__items {
+		@include grid(repeat(2, 1fr), 36px 50px);
+
+		@include mq(lg) {
+			gap: 40px;
+		}
+
+		@include mq(sm) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
