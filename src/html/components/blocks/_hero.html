@@ -1,0 +1,51 @@
+<@tag class="hero @class" style="background-image: url('img/blocks/hero/@bg.jpg');">
+    <div class="hero__container container">
+        <div class="hero__wrapper">
+            <div class="hero__descr">
+                <span class="hero__heading heading">
+                    @title
+                </span>
+                <div class="hero__text">
+                    @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+                </div>
+            </div>
+            <form class="hero__form form">
+                <div class="form__header">
+                    <span class="form__title subtitle">
+                        1 М<sup>2</sup> от 29 700 ₽
+                    </span>
+                    <p class="form__text">
+                        Оставьте свои контактные данные и получите проект в 
+                        <span class="form__accent">подарок</span>
+                    </p>
+                </div>
+                <div class="form__body">
+                    <div class="form__item">
+                        <label class="sr-only" for="@name-id">Введите ваше имя</label>
+                        <input class="form__field" id="@name-id" name="name" type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="sr-only" for="@phone-id">
+                            Введите ваш номер телефона
+                        </label>
+                        <input class="form__field" id="@phone-id" name="phone" type="tel" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="sr-only" for="@email-id">
+                            Введите вашу электронную почту
+                        </label>
+                        <input class="form__field" id="@email-id" name="email" type="email" placeholder="Ваш email" required>
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <button class="form__button button" type="button">
+                        Отправить
+                    </button>
+                    <p class="form__subtext">
+                        Нажимая на кнопку, вы даёте согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</@tag>

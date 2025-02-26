@@ -13,3 +13,11 @@
 		}
 	}
 }
+
+@mixin paragraph-mb($mb: 12px) {
+	p {
+		&:not(:last-child) {
+			margin-bottom: $mb;
+		}
+	}
+}

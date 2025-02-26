@@ -1,0 +1,17 @@
+.home-hero {
+	&__buttons {
+		display: flex;
+		gap: 15px;
+	}
+
+	&__button {
+		position: relative;
+		inset: unset;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-white);
+			}
+		}
+	}
+}

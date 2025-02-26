@@ -1,0 +1,46 @@
+<section class="home-hero section">
+    <div class="home-hero__swiper swiper">
+        <ul class="home-hero__items swiper-wrapper">
+            @include('../../components/blocks/_hero.html', {
+            'tag': 'li',
+            'class': 'swiper-slide',
+            'bg': '1',
+            'title': 'Модульные здания в кратчайшие сроки',
+            'text': ['Проектирование, изготовление, комплектация, доставка и строительство модульных зданий'],
+            'name-id': 'home-hero-name-1',
+            'phone-id': 'home-hero-phone-1',
+            'email-id': 'home-hero-email-1'
+            })
+
+            @include('../../components/blocks/_hero.html', {
+            'tag': 'li',
+            'class': 'swiper-slide',
+            'bg': '2',
+            'title': 'Здания выдерживают температуру до -50',
+            'text': ['Хотите разместить сотрудников в труднодоступном регионе России?'],
+            'name-id': 'home-hero-name-2',
+            'phone-id': 'home-hero-phone-2',
+            'email-id': 'home-hero-email-2'
+            })
+
+            @include('../../components/blocks/_hero.html', {
+            'tag': 'li',
+            'class': 'swiper-slide',
+            'bg': '3',
+            'title': 'Срок эксплуатации модуля свыше 20 лет',
+            'text': ['Возможность достроить здание с ростом числа сотрудников или перевезти его с объекта на объект'],
+            'name-id': 'home-hero-name-3',
+            'phone-id': 'home-hero-phone-3',
+            'email-id': 'home-hero-email-3'
+            })
+        </ul>
+        <div class="hero__container hero__container--buttons container">
+            <div class="home-hero__buttons">
+                <button class="home-hero__button home-hero__button--prev swiper-button-prev" type="button">
+                </button>
+                <button class="home-hero__button home-hero__button--next swiper-button-next" type="button">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

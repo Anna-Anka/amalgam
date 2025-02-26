@@ -1,0 +1,93 @@
+.hero {
+	@include bg-properties;
+
+	position: relative;
+	padding: 80px 0 160px;
+	min-height: calc(var(--full-screen) - var(--header-height));
+	color: var(--color-white);
+
+	@include mq(lg) {
+		padding: 50px 0 100px;
+	}
+
+	@include mq(md) {
+		padding-bottom: 60px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: linear-gradient(
+			331.78deg,
+			rgba(32, 32, 32, 0) 27.53%,
+			rgba(32, 32, 32, 0.58) 65.72%
+		);
+	}
+
+	&__container {
+		position: relative;
+		z-index: 1;
+
+		&--buttons {
+			position: absolute;
+			left: 50%;
+			bottom: 80px;
+			transform: translate(-50%);
+
+			@include mq(lg) {
+				bottom: 50px;
+			}
+
+			@include mq(md) {
+				bottom: 28px;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+
+		@include mq(lg) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__heading {
+		@include mq(md, min) {
+			max-width: 836px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+
+			@include mq(md) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&__text {
+		@include paragraph-mb(8px);
+
+		font-family: var(--font-secondary);
+		font-size: 20px;
+
+		@include mq(lg) {
+			font-size: 16px;
+		}
+
+		@include mq(md, min) {
+			max-width: 540px;
+		}
+	}
+
+	&__form {
+		@include mq(sm, min) {
+			max-width: 345px;
+		}
+	}
+}
