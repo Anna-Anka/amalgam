@@ -13,9 +13,9 @@
 	width: var(--burger-width-button);
 	height: var(--burger-height-button);
 	color: var(--burger-color);
-	transition:
-		top 0.4s,
-		right 0.4s;
+	// transition:
+	// 	top 0.4s,
+	// 	right 0.4s;
 
 	&::before,
 	&::after {
@@ -26,9 +26,9 @@
 		width: var(--burger-width);
 		height: var(--burger-line-height);
 		background-color: currentcolor;
-		transition:
-			transform 0.3s ease-in-out,
-			top 0.3s ease-in-out;
+		// transition:
+		// 	transform 0.3s ease-in-out,
+		// 	top 0.3s ease-in-out;
 	}
 
 	&::before {
@@ -51,7 +51,7 @@
 		height: var(--burger-line-height);
 		background-color: currentcolor;
 		transform: translateY(-50%);
-		transition: transform 0.3s ease-in-out;
+		// transition: transform 0.3s ease-in-out;
 	}
 
 	&--active {
@@ -63,9 +63,9 @@
 		&::before,
 		&::after {
 			top: 50%;
-			transition:
-				transform 0.3s ease-in-out,
-				top 0.3s ease-in-out;
+			// transition:
+			// 	transform 0.3s ease-in-out,
+			// 	top 0.3s ease-in-out;
 		}
 
 		&::before {
@@ -78,7 +78,7 @@
 
 		.burger-button__line {
 			transform: scale(0);
-			transition: transform 0.3s ease-in-out;
+			// transition: transform 0.3s ease-in-out;
 		}
 	}
 }
