@@ -1,0 +1,30 @@
+<section class="directions section">
+    <div class="container">
+        <h2 class="directions__title title">
+            <span class="title__accent">выбирайте то,</span> что вам подходит
+        </h2>
+        <ul class="directions__items">
+            <li class="directions__item">
+                @include('../../components/cards/_direction-card.html', {
+                'img': '1',
+                'title': '<span class="subtitle__accent">Модульные здания</span> любого назначения и размера под ключ от экспертов',
+                'list': ['Экономия 300% на доставке за счёт упаковки — транспак', 'Современная отделка', 'Необходимые инженерные системы', 'Высокая скорость монтажа']
+                })
+            </li>
+            <li class="directions__item">
+                @include('../../components/cards/_direction-card.html', {
+                'img': '2',
+                'title': '<span class="subtitle__accent">Вахтовые посёлки</span> под ключ от экспертов',
+                'list': ['За один рейс перевозим 150м<sup>2</sup> основных конструкций модульных зданий', 'Самое быстрое заселение сотрудуников', 'Полная комплектация зданий', 'Высокая скорость монтажа']
+                })
+            </li>
+            <li class="directions__item">
+                @include('../../components/cards/_direction-card.html', {
+                'img': '3',
+                'title': '<span class="subtitle__accent">Отдельностоящие модули</span> различного назначения под ключ',
+                'list': ['От 29 700 рублей за 1м<sup>2</sup>', 'Выгода 90 000 рублей', 'Высокая скорость монтажа']
+                })
+            </li>
+        </ul>
+    </div>
+</section>

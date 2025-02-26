@@ -1,0 +1,16 @@
+<article class="direction-card">
+    <div class="direction-card__image">
+        <picture>
+            <source srcset="img/blocks/directions/@img.avif 1x, img/blocks/directions/@img@2x.avif 2x" type="image/avif">
+            <source srcset="img/blocks/directions/@img.webp 1x, img/blocks/directions/@img@2x.webp 2x" type="image/webp">
+            <img src="img/blocks/directions/@img.jpg" srcset="img/blocks/directions/@img@2x.jpg 2x" alt="@alt" loading="lazy">
+        </picture>
+    </div>
+    <div class="direction-card__content">
+        <h3 class="direction-card__title subtitle">@title</h3>
+        <ul class="direction-card__items">
+            @for (var i = 0; i < list.length; i++) { <li class="direction-card__item"> `+list[i]+` </li> }
+        </ul>
+        <a class="direction-card__link button button--secondary" href="#">Подробнее</a>
+    </div>
+</article>

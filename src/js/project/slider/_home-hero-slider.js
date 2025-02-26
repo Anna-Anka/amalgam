@@ -9,7 +9,7 @@ if (document.querySelector('.home-hero__swiper')) {
         speed: 800,
         slidesPerGroup: 1,
         slidesPerView: 1,
-        centeredSlides: true,
+        allowTouchMove: false,        
 
         autoplay: {
             delay: 10000,

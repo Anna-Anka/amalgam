@@ -1,0 +1,12 @@
+.directions {
+	background-color: var(--color-blue-50);
+
+	&__items {
+		@include grid(repeat(auto-fill, minmax(315px, 1fr)));
+
+		@include mq(sm) {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+	}
+}

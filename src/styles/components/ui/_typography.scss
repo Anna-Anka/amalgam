@@ -1,14 +1,14 @@
 .heading,
-.subtitle {
+.title {
 	display: inline-block;
 	font-family: var(--font-secondary);
-	line-height: 1.2;
+	text-transform: uppercase;
 }
 
 .heading {
 	font-weight: 700;
 	font-size: 44px;
-	text-transform: uppercase;
+	line-height: 1.2;
 	color: var(--color-white);
 
 	@include mq(lg) {
@@ -20,7 +20,31 @@
 	}
 }
 
+.title {
+	margin-bottom: 32px;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.3;
+	letter-spacing: -0.02em;
+	color: var(--color-blue-300);
+
+	&__accent {
+		color: var(--color-orange-500);
+	}
+
+	@include mq(lg) {
+		margin-bottom: 24px;
+		font-size: 26px;
+	}
+}
+
 .subtitle {
-	font-weight: 500;
-	font-size: 24px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.3;
+	color: var(--color-blue-300);
+
+	&__accent {
+		color: var(--color-orange-500);
+	}
 }

@@ -21,3 +21,14 @@
 		}
 	}
 }
+
+@mixin circle($sizes: 8px) {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 6px;
+	border-radius: 50%;
+	width: $sizes;
+	height: $sizes;
+	background-color: var(--color-orange-500);
+}

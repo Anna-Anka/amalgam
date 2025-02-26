@@ -7,11 +7,7 @@
 	color: var(--color-white);
 
 	@include mq(lg) {
-		padding: 50px 0 100px;
-	}
-
-	@include mq(md) {
-		padding-bottom: 60px;
+		padding: 50px 0;
 	}
 
 	&::before {
@@ -78,6 +74,7 @@
 
 		@include mq(lg) {
 			font-size: 16px;
+			line-height: 1.3;
 		}
 
 		@include mq(md, min) {
