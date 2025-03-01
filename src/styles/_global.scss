@@ -5,6 +5,10 @@ body {
 	line-height: 1.5;
 	color: var(--color-blue-200);
 	background-color: var(--color-white);
+
+	@include mq(lg) {
+		font-size: 14px;
+	}
 }
 
 .container {

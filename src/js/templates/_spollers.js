@@ -110,4 +110,4 @@ import { dataMediaQueries } from '../utils/_data-media-queries.js';
             }
         }
     }
-})
+})()

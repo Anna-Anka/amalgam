@@ -1,0 +1,100 @@
+.building-advantages {
+	background-color: var(--color-blue-50);
+
+	&__title {
+		@include mq(lg, min) {
+			width: 100%;
+			max-width: 632px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 40px;
+
+		@include mq(md) {
+			flex-direction: column;
+			gap: 24px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__text {
+		@include paragraph-mb;
+
+		@include mq(md, min) {
+			width: 100%;
+			max-width: 654px;
+		}
+	}
+
+	&__image {
+		@include resize-picture(25%);
+
+		width: 100%;
+		height: 0;
+		max-width: 510px;
+
+		@include mq(md) {
+			padding-bottom: 64%;
+			max-width: 100%;
+		}
+
+		img {
+			object-fit: contain;
+		}
+	}
+
+	.spollers {
+		@include mq(md, min) {
+			counter-reset: item-counter;
+		}
+
+		&__item {
+			@include mq(md, min) {
+				counter-increment: item-counter;
+				position: relative;
+			}
+
+			&::before {
+				@include mq(md, min) {
+					content: counter(item-counter, decimal-leading-zero);
+					position: absolute;
+					left: 0;
+					top: 18px;
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 1.2;
+					color: var(--color-grey-200);
+				}
+			}
+		}
+
+		&__button {
+			@include mq(md, min) {
+				padding-left: 40px;
+			}
+
+			span {
+				@include mq(lg, min) {
+					display: block;
+					margin-left: auto;
+					width: 100%;
+					max-width: 472px;
+				}
+			}
+		}
+
+		&__body {
+			@include mq(lg, min) {
+				margin-left: auto;
+				width: 100%;
+				max-width: 510px;
+			}
+		}
+	}
+}

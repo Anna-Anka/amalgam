@@ -14,10 +14,14 @@
 	}
 }
 
-@mixin paragraph-mb($mb: 12px) {
+@mixin paragraph-mb($mb: 12px, $amb: 6px) {
 	p {
 		&:not(:last-child) {
 			margin-bottom: $mb;
+
+			@include mq(md) {
+				margin-bottom: $amb;
+			}
 		}
 	}
 }
