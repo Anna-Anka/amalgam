@@ -16,13 +16,26 @@
 <main class="main">
     @include('./pages/home-page/_home-hero.html')
     @include('./pages/home-page/_directions.html')
-    @include('./components/blocks/_promo.html')
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
     @include('./pages/home-page/_demo.html')
     @include('./components/blocks/_building-advantages.html')
+
     @include('./components/blocks/_realized-projects.html', {
     'class': 'realized-projects--dark'
     })
+
     @include('./components/blocks/_geography.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name-2',
+    'phone-id': 'promo-phone-2',
+    'email-id': 'promo-email-2'
+    })
+
 </main>
 
 @include('./components/blocks/_footer.html')
