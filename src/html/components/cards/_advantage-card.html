@@ -1,0 +1,13 @@
+<article class="advantage-card @class">
+    <div class="advantage-card__header">
+        <h3 class="advantage-card__title subtitle">@title</h3>
+        <span class="advantage-card__icon" aria-hidden>
+            <svg>
+                <use xlink:href="img/sprite.svg#@icon">
+            </svg>
+        </span>
+    </div>
+    <div class="advantage-card__text">
+        @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+    </div>
+</article>

@@ -1,0 +1,7 @@
+.advantages {
+	background-color: var(--color-blue-50);
+
+	&__items {
+		@include grid(repeat(auto-fit, minmax(315px, 1fr)), 30px);
+	}
+}
