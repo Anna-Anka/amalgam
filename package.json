@@ -71,6 +71,8 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"graph-tabs": "^1.0.2",
+		"mixitup": "^3.3.2",
 		"swiper": "^11.2.4"
 	}
 }

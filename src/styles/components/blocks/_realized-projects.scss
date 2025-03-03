@@ -1,0 +1,136 @@
+.realized-projects {
+	background-color: var(--color-blue-50);
+
+	&--dark {
+		background-color: var(--color-blue-300);
+
+		.realized-projects {
+			&__title {
+				color: var(--color-white);
+			}
+
+			&__text {
+				color: var(--color-grey-50);
+			}
+
+			&__button {
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--color-blue-50);
+					}
+				}
+			}
+		}
+
+		.tabs {
+			&__nav-btn {
+				color: var(--color-white);
+
+				&:focus-visible {
+					border-color: var(--color-white);
+				}
+			}
+		}
+	}
+
+	&__header {
+		margin-bottom: 18px;
+
+		@include mq(lg, min) {
+			width: 100%;
+			max-width: 685px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 12px;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+
+	.tabs {
+		&__nav {
+			position: relative;
+			z-index: 2;
+			flex-wrap: wrap;
+			margin-right: 140px;
+			margin-bottom: 32px;
+			gap: 20px;
+
+			@include mq(lg) {
+				flex-wrap: nowrap;
+				overflow-x: auto;
+				margin-right: 0;
+				margin-bottom: 16px;
+				padding-bottom: 8px;
+				white-space: nowrap;
+				gap: 12px;
+			}
+		}
+
+		&__nav-btn {
+			&--active {
+				color: var(--color-white);
+				background-color: var(--color-orange-500);
+				pointer-events: none;
+			}
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		margin-top: -80px;
+		padding-top: 80px;
+
+		@include mq(lg) {
+			margin-top: 0;
+			padding-top: 0;
+			padding-bottom: 68px;
+		}
+	}
+
+	&__swiper {
+		position: unset;
+	}
+
+	&__items {
+		align-items: stretch;
+	}
+
+	&__item {
+		height: auto;
+	}
+
+	&__buttons {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: flex;
+		gap: 15px;
+
+		@include mq(lg) {
+			left: 0;
+			right: unset;
+			top: unset;
+			bottom: 0;
+		}
+	}
+
+	&__button {
+		position: relative;
+		inset: unset;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-blue-100);
+			}
+		}
+	}
+
+	.swiper-button-disabled {
+		opacity: 0.7;
+	}
+}

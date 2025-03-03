@@ -1,1 +1,1 @@
-
+import './_tabs.js';

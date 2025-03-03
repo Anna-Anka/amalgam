@@ -1,0 +1,119 @@
+.realize-card {
+	position: relative;
+	border-radius: 8px;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-white);
+
+	&__image {
+		@include resize-picture(86%);
+
+		border-radius: inherit;
+		height: 0;
+
+		img,
+		picture {
+			border-radius: inherit;
+		}
+	}
+
+	&__label {
+		@include flex-simple(16px);
+
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		flex-wrap: wrap;
+		border-radius: 4px;
+		padding: 4px 8px;
+		font-size: 14px;
+		color: var(--color-blue-300);
+		background-color: var(--color-white);
+	}
+
+	&__item {
+		position: relative;
+		align-self: center;
+		padding-left: 24px;
+
+		@include mq(lg) {
+			padding-left: 16px;
+			font-size: 12px;
+		}
+
+		&::before {
+			@include bg-properties(contain);
+
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			color: var(--color-orange-500);
+
+			@include mq(lg) {
+				width: 12px;
+				height: 12px;
+			}
+		}
+
+		&--deadline {
+			&::before {
+				top: 2px;
+				background-image: url('../img/sprite.svg#timer');
+			}
+		}
+
+		&--size {
+			&::before {
+				top: 4px;
+				background-image: url('../img/sprite.svg#resize');
+			}
+		}
+	}
+
+	&__content {
+		padding: 14px 16px 16px;
+	}
+
+	&__title {
+		font-weight: 600;
+
+		@include mq(lg) {
+			font-size: 16px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+
+		a {
+			display: flex;
+			outline: 0;
+			border-radius: 4px;
+			transition:
+				color 0.3s,
+				box-shadow 0.3s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+			}
+
+			&:focus-visible {
+				box-shadow: 0 0 0 2px var(--color-orange-500);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--color-orange-500);
+				}
+			}
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+	}
+}
