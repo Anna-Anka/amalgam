@@ -10,17 +10,9 @@
 		background-color 0.3s,
 		box-shadow 0.3s;
 
-	&::before {
-		@include bg-properties(contain);
-
-		content: '';
-		position: absolute;
-		right: 50%;
-		top: 50%;
+	svg {
 		width: 24px;
 		height: 24px;
-		background-image: url('../img/icons/arrow.svg');
-		transform: translateX(50%) translateY(-50%);
 	}
 
 	&::after {
