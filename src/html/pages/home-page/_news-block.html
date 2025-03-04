@@ -1,0 +1,49 @@
+<section class="news-block section">
+    <div class="container">
+        <div class="news-block__header">
+            <h2 class="news-block__title title">
+                мы <span class="title__accent">не стоим</span> на месте
+            </h2>
+            <a class="news-block__all button button--secondary" href="#">
+                Все новости
+                <svg aria-hidden>
+                    <use xlink:href="img/sprite.svg#arrow">
+                </svg>
+            </a>
+        </div>
+        <div class="news-block__wrapper">
+            <div class="news-block__video">
+                <div class="news-block__promo">
+                    <iframe src="https://vk.com/video_ext.php?oid=-219054695&id=456239611&hd=2&autoplay=1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <ul class="news-block__items">
+                <li class="news-block__item">
+                    @include('../../components/cards/_news-card.html', {
+                    'datetime': '2024-11-01',
+                    'date': '1.11.2024',
+                    'title': 'Амальгама на премии «Золотой Меркурий»',
+                    'text': ['Компания “Амальгама” достигла значительного успеха в сфере строительного бизнеса Новосибирской области.']
+                    })
+                </li>
+                <li class="news-block__item">
+                    @include('../../components/cards/_news-card.html', {
+                    'datetime': '2024-11-01',
+                    'date': '1.11.2024',
+                    'title': 'Амальгама на KAZBUILD',
+                    'text': ['Компания “Амальгама” достигла значительного успеха в сфере строительного бизнеса Новосибирской области.']
+                    })
+                </li>
+                <li class="news-block__item">
+                    @include('../../components/cards/_news-card.html', {
+                    'datetime': '2024-11-01',
+                    'date': '1.11.2024',
+                    'title': 'Амальгама на KAZBUILD',
+                    'text': ['Компания “Амальгама” достигла значительного успеха в сфере строительного бизнеса Новосибирской области.']
+                    })
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

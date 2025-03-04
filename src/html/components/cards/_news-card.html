@@ -1,0 +1,7 @@
+<article class="news-card">
+    <time class="news-card__date" datetime="@datetime">@date</time>
+    <h3 class="news-card__title subtitle">@title</h3>
+    <div class="news-card__text">
+        @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+    </div>
+</article>

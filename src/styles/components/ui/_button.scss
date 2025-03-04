@@ -29,6 +29,10 @@
 			border-color: var(--color-orange-200);
 			color: var(--color-orange-500);
 			background-color: var(--color-white);
+
+			svg {
+				color: var(--color-orange-500);
+			}
 		}
 	}
 
@@ -36,5 +40,20 @@
 		border-color: var(--color-orange-500);
 		color: var(--color-blue-300);
 		background-color: transparent;
+
+		&:focus-visible {
+			border-color: var(--color-blue-300);
+			background-color: var(--color-white);
+		}
+
+		svg {
+			color: var(--color-orange-200);
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+		transition: color 0.3s;
 	}
 }
