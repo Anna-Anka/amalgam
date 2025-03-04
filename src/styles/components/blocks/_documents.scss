@@ -1,0 +1,134 @@
+.documents {
+	background-color: var(--color-blue-300);
+
+	&__wrapper {
+		position: relative;
+
+		@include mq(lg) {
+			padding-bottom: 30px;
+		}
+	}
+
+	&__title {
+		color: var(--color-white);
+
+		@include mq(lg, min) {
+			margin-right: 140px;
+		}
+
+		@include mq(sm) {
+			text-align: center;
+		}
+	}
+
+	&__content {
+		@include flex-alignment(30px, space-between, flex-start);
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
+	}
+
+	&__list {
+		width: 100%;
+
+		@include mq(lg, min) {
+			max-width: 632px;
+		}
+	}
+
+	&__name {
+		@include flex-simple(8px);
+
+		position: relative;
+		border-top: 1px solid var(--color-blue-200);
+		border-bottom: 1px solid var(--color-blue-200);
+		padding: 12px 0;
+		width: 100%;
+		text-align: left;
+		color: var(--color-white);
+		transition: border-color 0.3s;
+
+		svg {
+			width: 24px;
+			height: 24px;
+			color: var(--color-orange-200);
+			transition: color 0.3s;
+		}
+
+		&--active {
+			border-color: var(--color-orange-500);
+
+			svg {
+				color: var(--color-orange-500);
+			}
+		}
+	}
+
+	&__swiper {
+		position: unset;
+		width: 100%;
+
+		@include mq(lg, min) {
+			max-width: 590px;
+		}
+	}
+
+	&__item {
+		@include mq(sm, min) {
+			border: 1px solid transparent;
+			padding: 8px;
+			transition: border-color 0.3s;
+		}
+
+		&.swiper-slide-active {
+			@include mq(sm, min) {
+				border-color: var(--color-orange-500);
+			}
+		}
+	}
+
+	&__image {
+		@include resize-picture(150%);
+
+		@include mq(sm) {
+			padding-bottom: 100%;
+		}
+
+		img {
+			object-fit: contain;
+		}
+	}
+
+	&__buttons {
+		@include flex-simple(8px);
+
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		@include mq(lg) {
+			left: 0;
+			right: unset;
+			top: unset;
+			bottom: 0;
+			transform: translateY(100%);
+		}
+
+		@include mq(sm) {
+			right: 50%;
+			transform: translateX(50%) translateY(100%);
+		}
+	}
+
+	&__button {
+		position: relative;
+		inset: unset;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-blue-50);
+			}
+		}
+	}
+}
