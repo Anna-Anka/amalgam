@@ -91,6 +91,8 @@
 	&__image {
 		@include resize-picture(150%);
 
+		display: flex;
+
 		@include mq(sm) {
 			padding-bottom: 100%;
 		}
