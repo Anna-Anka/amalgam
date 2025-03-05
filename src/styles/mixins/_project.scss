@@ -36,3 +36,8 @@
 	height: $sizes;
 	background-color: var(--color-orange-500);
 }
+
+@mixin swiper-buttons() {
+	display: flex;
+	gap: 8px;
+}

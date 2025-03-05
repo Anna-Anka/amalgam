@@ -13,7 +13,7 @@
 </div> -->
 
 <h1 class="sr-only">Быстровозводимые здания</h1>
-<main class="main">
+<div class="main">
     @include('./pages/home-page/_home-hero.html')
     @include('./pages/home-page/_directions.html')
     @include('./components/blocks/_promo.html', {
@@ -41,7 +41,8 @@
     @include('./pages/home-page/_news-block.html')
 
     @include('./components/blocks/_reviews.html')
-</main>
+    @include('./components/blocks/_brands.html')
+</div>
 
 @include('./components/blocks/_footer.html')
 @include('./settings/_bottom.html')
