@@ -1,0 +1,107 @@
+<section class="reviews section">
+    <div class="container">
+        <div class="reviews__wrapper">
+            <h2 class="reviews__title title">
+                что о нас <span class="title__accent">говорят</span>
+            </h2>
+            <ul class="reviews__sources">
+                <li class="review-source">
+                    <div class="review-source__wrapper">
+                        <img class="review-source__img" src="img/blocks/reviews/sources/gis.svg" alt="2гис" width="42" height="42" loading="lazy">
+                        <div class="review-source__content">
+                            <span class="review-source__title subtitle">5.0</span>
+                            <a class="review-source__link" href="#" target="_blank">Оценка на 2гис</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="review-source">
+                    <div class="review-source__wrapper">
+                        <img class="review-source__img" src="img/blocks/reviews/sources/yandex-map.svg" alt="Яндекс карты" width="42" height="42" loading="lazy">
+                        <div class="review-source__content">
+                            <span class="review-source__title subtitle">4.5</span>
+                            <span class="review-source__link" href="#" target="_blank">
+                                Оценка на Яндекс карты
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="reviews__swiper swiper">
+                <ul class="reviews__items swiper-wrapper">
+                    <li class="reviews__item swiper-slide">
+                        @include('../../components/cards/_review-card.html', {
+                        'logo': 'suek',
+                        'logo-alt': 'суэк-хакасия',
+                        'name': 'ооо «суэк-хакасия» г. черногорск',
+                        'text': ['По заключённому договору № СХ-23/464М от 16.06.2023. между 000 «СУЭК-Хакасия» и ООО «Амальгамы», на поставку Блок-Модуля, хотим сообщить следующее:', 'Компания «Амальгама» свои обязательства выполнила в полном объёме, в сроки,предусмотренные договором поставки'],
+                        'scan': '1',
+                        'fancybox': '1'
+                        })
+                    </li>
+                    <li class="reviews__item swiper-slide">
+                        @include('../../components/cards/_review-card.html', {
+                        'logo': 'suek',
+                        'logo-alt': 'суэк-хакасия',
+                        'name': 'ооо «суэк-хакасия» г. черногорск',
+                        'text': ['Компания «Амальгама» свои обязательства выполнила в полном объёме, в сроки,предусмотренные договором поставки'],
+                        'scan': '1',
+                        'fancybox': '2'
+                        })
+                    </li>
+                    <li class="reviews__item swiper-slide">
+                        @include('../../components/cards/_review-card.html', {
+                        'logo': 'suek',
+                        'logo-alt': 'суэк-хакасия',
+                        'name': 'ооо «суэк-хакасия» г. черногорск',
+                        'text': ['По заключённому договору № СХ-23/464М от 16.06.2023. между 000 «СУЭК-Хакасия» и ООО «Амальгамы», на поставку Блок-Модуля, хотим сообщить следующее:'],
+                        'scan': '1',
+                        'fancybox': '3'
+                        })
+                    </li>
+                    <li class="reviews__item swiper-slide">
+                        @include('../../components/cards/_review-card.html', {
+                        'logo': 'suek',
+                        'logo-alt': 'суэк-хакасия',
+                        'name': 'ооо «суэк-хакасия» г. черногорск',
+                        'text': ['По заключённому договору № СХ-23/464М от 16.06.2023. между 000 «СУЭК-Хакасия» и ООО «Амальгамы», на поставку Блок-Модуля, хотим сообщить следующее:', 'Компания «Амальгама» свои обязательства выполнила в полном объёме, в сроки,предусмотренные договором поставки'],
+                        'scan': '1',
+                        'fancybox': '4'
+                        })
+                    </li>
+                    <li class="reviews__item swiper-slide">
+                        @include('../../components/cards/_review-card.html', {
+                        'logo': 'suek',
+                        'logo-alt': 'суэк-хакасия',
+                        'name': 'ооо «суэк-хакасия» г. черногорск',
+                        'text': ['Компания «Амальгама» свои обязательства выполнила в полном объёме, в сроки,предусмотренные договором поставки'],
+                        'scan': '1',
+                        'fancybox': '5'
+                        })
+                    </li>
+                    <li class="reviews__item swiper-slide">
+                        @include('../../components/cards/_review-card.html', {
+                        'logo': 'suek',
+                        'logo-alt': 'суэк-хакасия',
+                        'name': 'ооо «суэк-хакасия» г. черногорск',
+                        'text': ['По заключённому договору № СХ-23/464М от 16.06.2023. между 000 «СУЭК-Хакасия» и ООО «Амальгамы», на поставку Блок-Модуля, хотим сообщить следующее:'],
+                        'scan': '1',
+                        'fancybox': '6'
+                        })
+                    </li>
+                </ul>
+                <div class="reviews__buttons">
+                    <button class="reviews__button reviews__button--prev swiper-button-prev" type="button">
+                        <svg aria-hidden>
+                            <use xlink:href="img/sprite.svg#arrow">
+                        </svg>
+                    </button>
+                    <button class="reviews__button reviews__button--next swiper-button-next" type="button">
+                        <svg aria-hidden>
+                            <use xlink:href="img/sprite.svg#arrow">
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

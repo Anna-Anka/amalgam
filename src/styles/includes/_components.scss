@@ -1,6 +1,7 @@
 // ui
 @import '../components/ui/button';
 @import '../components/ui/typography';
+@import '../components/ui/review-source';
 
 // blocks
 @import '../components/blocks/header/header';
@@ -16,6 +17,7 @@
 @import '../components/blocks/geography';
 @import '../components/blocks/advantages';
 @import '../components/blocks/documents';
+@import '../components/blocks/reviews';
 @import '../components/blocks/footer';
 
 // cards
@@ -24,3 +26,4 @@
 @import '../components/cards/realize-card';
 @import '../components/cards/advantage-card';
 @import '../components/cards/news-card';
+@import '../components/cards/review-card';

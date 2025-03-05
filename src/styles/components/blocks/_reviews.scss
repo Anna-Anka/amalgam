@@ -1,0 +1,60 @@
+.reviews {
+	&__wrapper {
+		position: relative;
+
+		@include mq(lg) {
+			padding-bottom: 70px;
+		}
+	}
+
+	&__title {
+		@include mq(md, min) {
+			margin-right: 140px;
+		}
+	}
+
+	&__sources {
+		@include flex-simple(20px 50px);
+
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
+
+	&__swiper {
+		position: static;
+	}
+
+	&__items {
+		align-items: stretch;
+	}
+
+	&__item {
+		height: auto;
+	}
+
+	&__buttons {
+		@include flex-simple(8px);
+
+		position: absolute;
+		right: 0;
+		top: 8px;
+
+		@include mq(lg) {
+			left: 0;
+			right: unset;
+			top: unset;
+			bottom: 0;
+		}
+	}
+
+	&__button {
+		position: static;
+		background-color: var(--color-blue-50);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-blue-100);
+			}
+		}
+	}
+}
