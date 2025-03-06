@@ -1,0 +1,10 @@
+.camps-info {
+	.block-info {
+		&__text {
+			@include mq(xl, min) {
+				column-count: 2;
+				gap: 30px;
+			}
+		}
+	}
+}
