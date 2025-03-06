@@ -1,4 +1,6 @@
 .block-info {
+	background-color: var(--color-blue-50);
+
 	&__row {
 		@include flex-simple;
 
