@@ -1,0 +1,59 @@
+<section class="advantages section">
+    <div class="container">
+        <h2 class="advantages__title title">
+            <span class="title__accent">Преимущества</span> наших модульных общежитий
+        </h2>
+        <ul class="advantages__items">
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Рациональная планировка',
+                'text': ['Здание включает все необходимые помещения, включая зоны отдыха и специализированные комнаты'],
+                'icon': 'star',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Комфорт проживания',
+                'text': ['Качественная изоляция и вентиляция обеспечивают удобство и здоровье сотрудников'],
+                'icon': 'open-arm',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Близость к работе',
+                'text': ['сокращает время на дорогу, что снижает утомляемость и повышает производительность'],
+                'icon': 'pin',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Упрощение управления',
+                'text': ['Компактное размещение облегчает координацию и проведение инструктажей'],
+                'icon': 'bed',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Контроль расходов',
+                'text': ['Точное планирование затрат делает проект экономически выгодным'],
+                'icon': 'wallet',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Эффективная безопасность',
+                'text': ['Централизованный контроль доступа повышает уровень охраны'],
+                'icon': 'safely',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'class': 'advantage-card--accent',
+                'title': 'Модульные общежития',
+                'text': ['Это практичное решение для повышения комфорта и производительности сотрудников при минимальных затратах'],
+                'icon': 'home',
+                })
+            </li>
+        </ul>
+    </div>
+</section>
