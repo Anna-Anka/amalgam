@@ -1,0 +1,38 @@
+<section class="demo section">
+    <div class="container">
+        <h2 class="demo__title title">
+            модульные здания
+            <span class="title__accent">удобны в использовании</span>
+        </h2>
+        <ul class="demo__items">
+            <li class="demo__item">
+                @include('../../components/cards/_demo-card.html', {
+                'img': 'pages/modular/comfortable/building',
+                'alt': '',
+                'list': ['Легко меняйте планировку, при совмещении модулей']
+                })
+            </li>
+            <li class="demo__item">
+                @include('../../components/cards/_demo-card.html', {
+                'img': 'pages/modular/comfortable/replace',
+                'alt': '',
+                'list': ['Можно быстро заменить испорченную панель', 'Панели с окнами и дверями можно менять местами']
+                })
+            </li>
+            <li class="demo__item">
+                @include('../../components/cards/_demo-card.html', {
+                'img': 'pages/modular/comfortable/replace',
+                'alt': '',
+                'list': ['Объединяйте модули без ограничений по площади']
+                })
+            </li>
+            <li class="demo__item">
+                @include('../../components/cards/_demo-card.html', {
+                'img': 'pages/modular/comfortable/building',
+                'alt': '',
+                'list': ['Стройте двух и трехэтажные здания', 'Наращивайте размеры постепенно, по мере роста численности сотрудников']
+                })
+            </li>
+        </ul>
+    </div>
+</section>

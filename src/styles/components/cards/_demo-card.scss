@@ -36,4 +36,21 @@
 		font-size: 14px;
 		line-height: 1.4;
 	}
+
+	&__item {
+		position: relative;
+		padding-left: 16px;
+		font-size: 14px;
+		line-height: 1.4;
+
+		&::before {
+			@include circle;
+
+			top: 5px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
 }
