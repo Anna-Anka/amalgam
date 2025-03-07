@@ -82,6 +82,17 @@
 		}
 	}
 
+	&__items {
+		list-style: outside;
+		padding-left: 20px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
 	&__form {
 		@include mq(sm, min) {
 			max-width: 345px;

@@ -5,9 +5,18 @@
                 <@titleTag class="hero__heading heading">
                     @title
                 </@titleTag>
+
+                @if(typeof text !== 'undefined' && text) {
                 <div class="hero__text">
                     @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
                 </div>
+                }
+
+                @if(typeof list !== 'undefined' && list) {
+                <ul class="hero__items">
+                    @for (var i = 0; i < list.length; i++) { <li class="hero__item"> `+list[i]+` </li> }
+                </ul>
+                }
             </div>
             <form class="hero__form form">
                 <div class="form__header">

@@ -1,0 +1,14 @@
+<article class="plan-card">
+    <div class="plan-card__image">
+        <picture>
+            <source srcset="img/blocks/plans/1.avif 1x, img/blocks/plans/1@2x.avif 2x" type="image/avif">
+            <source srcset="img/blocks/plans/1.webp 1x, img/blocks/plans/1@2x.webp 2x" type="image/webp">
+            <img src="img/blocks/plans/1.png" srcset="img/blocks/plans/1@2x.png 2x" alt="Планировка" loading="lazy">
+        </picture>
+    </div>
+    <h3 class="plan-card__subtitle subtitle">@title</h3>
+    <ul class="plan-card__list">
+        @for (var i = 0; i < list.length; i++) { <li class="plan-card__item"> `+list[i]+` </li> }
+    </ul>
+    <a class="plan-card__link button button--secondary" href="#">Подробнее</a>
+</article>
