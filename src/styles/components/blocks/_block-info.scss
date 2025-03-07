@@ -97,4 +97,10 @@
 			object-fit: cover;
 		}
 	}
+
+	ul,
+	ol {
+		list-style: outside;
+		padding-left: 16px;
+	}
 }
