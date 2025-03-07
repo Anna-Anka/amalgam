@@ -1,16 +1,32 @@
 <article class="direction-card">
     <div class="direction-card__image">
         <picture>
-            <source srcset="img/pages/home/directions/@img.avif 1x, img/pages/home/directions/@img@2x.avif 2x" type="image/avif">
-            <source srcset="img/pages/home/directions/@img.webp 1x, img/pages/home/directions/@img@2x.webp 2x" type="image/webp">
-            <img src="img/pages/home/directions/@img.jpg" srcset="img/pages/home/directions/@img@2x.jpg 2x" alt="@alt" loading="lazy">
+            <source srcset="img/@img.avif 1x, img/@img@2x.avif 2x" type="image/avif">
+            <source srcset="img/@img.webp 1x, img/@img@2x.webp 2x" type="image/webp">
+            <img src="img/@img.jpg" srcset="img/@img@2x.jpg 2x" alt="@alt" loading="lazy">
         </picture>
     </div>
     <div class="direction-card__content">
+
+        @if(contentHeader === 'true') {
+        <div class="direction-card__header">
+            <h3 class="direction-card__title subtitle">
+                <a href="#">@title</a>
+            </h3>
+            <span class="direction-card__price">
+                @price
+            </span>
+        </div>
+        }
+
+        @if (contentHeader === 'false') {
         <h3 class="direction-card__title subtitle">@title</h3>
         <ul class="direction-card__items">
             @for (var i = 0; i < list.length; i++) { <li class="direction-card__item"> `+list[i]+` </li> }
         </ul>
-        <a class="direction-card__link button button--secondary" href="#">Подробнее</a>
+        <a class="direction-card__link button button--secondary" href="#">
+            @link
+        </a>
+        }
     </div>
 </article>
