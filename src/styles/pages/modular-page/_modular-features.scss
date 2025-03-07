@@ -1,0 +1,37 @@
+.modular-features {
+	background-color: var(--color-blue-50);
+
+	&__wrapper {
+		@include flex-alignment(40px, space-between, center);
+
+		@include mq(md) {
+			flex-direction: column;
+			gap: 28px;
+		}
+	}
+
+	&__content {
+		width: 100%;
+
+		@include mq(md, min) {
+			max-width: 540px;
+		}
+	}
+
+	&__image {
+		@include resize-picture(44%);
+
+		border-radius: 8px;
+		width: 100%;
+
+		@include mq(md, min) {
+			padding-bottom: 27%;
+			max-width: 758px;
+		}
+
+		picture,
+		img {
+			border-radius: inherit;
+		}
+	}
+}
