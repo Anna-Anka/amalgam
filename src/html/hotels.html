@@ -1,0 +1,56 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Строительство модульный гостиниц',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'tag': 'section',
+    'bg': '1',
+    'title': 'Модульные гостиницы под ключ от производителя в Новосибирске',
+    'titleTag': 'h1',
+    'list': ['Не уступают по характеристикам капитальным зданиям', 'Используются разные виды наружной и внутренней отделки под любой бюджет'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./components/blocks/_plans.html')
+
+    @include('./components/blocks/_block-info.html', {
+    'title': '<span class="title__accent">Особенности</span> модульных гостиниц',
+    'subtext': ['Модульная гостиница — это лучшее решение в данной области. Модульные гостиницы не уступают по характеристикам капитальным зданиям.'],
+    'text': ['Каждое здание изготавливается по предварительно выполненным проектам, обеспечивающим безопасность, надёжность и комфорт. Самое главное преимущество модульных гостиниц — это скорость их поставки и возведения.', 'Гостиницы отличаются по классам, количеству номеров и набору оказываемых услуг. Модульные здания компании «Амальгама» могут удовлетворить любое из требований.', 'В настоящий момент на рынке строительных материалов существует множество разновидностей для наружной и внутренней отделки, с помощью чего создаётся неповторимый дизайн под любой бюджет!', 'Модульные гостиницы обеспечиваются необходимыми инженерными сетями: электроснабжение, водоснабжение, координирование и др.', 'По Вашему запросу мы подготовим предложение под любой комплекс услуг гостиницы, площади и бюджету!'],
+    'imageSmall': 'pages/hotels/features/small',
+    'altSmall': 'Столовая внутри',
+    'imageBig': 'pages/hotels/features/big',
+    'altBig': 'Столовая снаружи'
+    })
+
+    @include('./pages/hotels-page/_hotels-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_realized-projects.html')
+    @include('./components/blocks/_produced.html')
+
+    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_brands.html')
+    @include('./components/blocks/_questions.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
