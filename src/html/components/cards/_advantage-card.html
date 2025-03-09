@@ -1,13 +1,25 @@
 <article class="advantage-card @class">
     <div class="advantage-card__header">
         <h3 class="advantage-card__title subtitle">@title</h3>
+
+        @if(typeof icon !== 'undefined' && icon) {
         <span class="advantage-card__icon" aria-hidden>
             <svg>
                 <use xlink:href="img/sprite.svg#@icon">
             </svg>
         </span>
+        }
     </div>
+
+    @if(typeof text !== 'undefined' && text) {
     <div class="advantage-card__text">
         @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
     </div>
+    }
+
+    @if(typeof items !== 'undefined' && items) {
+    <ul class="advantage-card__items">
+        @for (var i = 0; i < items.length; i++) { <li class="advantage-card__item"> `+items[i]+` </li> }
+    </ul>
+    }
 </article>

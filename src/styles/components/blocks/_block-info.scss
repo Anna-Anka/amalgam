@@ -62,6 +62,12 @@
 
 	&__text {
 		@include paragraph-mb;
+
+		ul,
+		ol {
+			list-style: outside;
+			padding-left: 16px;
+		}
 	}
 
 	&__images {
@@ -96,11 +102,5 @@
 		img {
 			object-fit: cover;
 		}
-	}
-
-	ul,
-	ol {
-		list-style: outside;
-		padding-left: 16px;
 	}
 }

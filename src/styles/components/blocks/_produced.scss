@@ -1,0 +1,85 @@
+.produced {
+	background-color: var(--color-white);
+
+	.block-info {
+		&__row {
+			&--content {
+				@include mq(xl) {
+					flex-direction: column;
+				}
+
+				.block-info__item {
+					@include mq(xl) {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	&__header {
+		margin-bottom: 32px;
+
+		@include mq(lg) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 12px;
+
+		@include mq(lg) {
+			margin-bottom: 6px;
+		}
+	}
+
+	&__subtext {
+		display: block;
+	}
+
+	&__characteristics {
+		@include mq(xl, min) {
+			margin-top: auto;
+		}
+	}
+
+	&__characteristic {
+		@include flex-simple(20px);
+
+		justify-content: space-between;
+		border-bottom: 1px solid var(--color-blue-100);
+		padding: 12px 0;
+	}
+
+	&__key {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.2;
+		color: var(--color-blue-300);
+	}
+
+	&__value {
+		font-size: 14px;
+		line-height: 1.4;
+		text-align: right;
+	}
+
+	.advantage-card {
+		background-color: var(--color-blue-50);
+	}
+
+	&__items {
+		@include grid(repeat(2, 1fr));
+
+		@include mq(md) {
+			grid-template-columns: 1fr;
+			gap: 24px;
+		}
+	}
+}

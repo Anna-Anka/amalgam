@@ -1,0 +1,94 @@
+<section class="produced block-info section">
+    <div class="container">
+        <div class="block-info__row block-info__row--content">
+            <div class="block-info__item block-info__item--small">
+                <div class="produced__info">
+                    <div class="produced__header">
+                        <h2 class="produced__title title">
+                            Как мы <span class="title__accent">производили</span>
+                        </h2>
+                        <span class="produced__subtext">
+                            Модульное общежитие для ООО «Газпромдобыча Томск»
+                        </span>
+                    </div>
+                    <ul class="produced__characteristics">
+                        <li class="produced__characteristic">
+                            <span class="produced__key">Размер:</span>
+                            <span class="produced__value">6000х2440х2630 мм</span>
+                        </li>
+                        <li class="produced__characteristic">
+                            <span class="produced__key">Продукт:</span>
+                            <span class="produced__value">Модульное общежитие для 30 человек</span>
+                        </li>
+                        <li class="produced__characteristic">
+                            <span class="produced__key">Площадь:</span>
+                            <span class="produced__value">459 м²</span>
+                        </li>
+                        <li class="produced__characteristic">
+                            <span class="produced__key">Количество модулей:</span>
+                            <span class="produced__value">28</span>
+                        </li>
+                        <li class="produced__characteristic">
+                            <span class="produced__key">Срок реализации:</span>
+                            <span class="produced__value">7 месяцев</span>
+                        </li>
+                        <li class="produced__characteristic">
+                            <span class="produced__key">Потребности клиента:</span>
+                            <span class="produced__value">7 месяцев</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block-info__item block-info__item--big">
+                <ul class="produced__items">
+                    <li class="produced__item">
+                        @include('../cards/_advantage-card.html', {
+                        'title': 'Сложности',
+                        'items': ['Болота: сложные условия грунта', 'Логистика: труднодоступная местность', 'Сжатые сроки реализации']
+                        })
+                    </li>
+                    <li class="produced__item">
+                        @include('../cards/_advantage-card.html', {
+                        'title': 'Результат',
+                        'items': ['Проект завершён в срок', 'Объект введён в эксплуатацию без доработок', 'Создано современное комфортное жильё, соответствующее техническому заданию.']
+                        })
+                    </li>
+                    <li class="produced__item">
+                        @include('../cards/_advantage-card.html', {
+                        'title': 'Потребности клиента',
+                        'items': ['Проектирование «под ключ», включая рабочую документацию.', 'Строительство фундамента', 'Монтаж инженерных сетей: водоснабжение, водоотведение, отопление, электричество.', 'Благоустройство территории.']
+                        })
+                    </li>
+                    <li class="produced__item">
+                        @include('../cards/_advantage-card.html', {
+                        'title': 'Решение',
+                        'items': ['Проектирование: Разработана рабочая документация с учётом болотистого грунта.', 'Фундамент: Применены адаптированные технологии и материалы для устойчивости.', 'Модули: Оснащены инженерными системами для комфортного проживания.', 'Территория: Выполнено благоустройство прилегающей зоны.']
+                        })
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="block-info__images">
+            <div class="block-info__row block-info__row--images">
+                <div class="block-info__item block-info__item--small">
+                    <div class="block-info__image">
+                        <picture>
+                            <source srcset="img/blocks/produced/small.avif 1x, img/blocks/produced/small@2x.avif 2x" type="image/avif">
+                            <source srcset="img/blocks/produced/small.webp 1x, img/blocks/produced/small@2x.webp 2x" type="image/webp">
+                            <img src="img/blocks/produced/small.jpg" srcset="img/blocks/produced/small@2x.jpg 2x" alt="Постройка 1" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+                <div class="block-info__item block-info__item--big">
+                    <div class="block-info__image">
+                        <picture>
+                            <source srcset="img/blocks/produced/big.avif 1x, img/blocks/produced/big@2x.avif 2x" type="image/avif">
+                            <source srcset="img/blocks/produced/big.webp 1x, img/blocks/produced/big@2x.webp 2x" type="image/webp">
+                            <img src="img/blocks/produced/big.jpg" srcset="img/blocks/produced/big@2x.jpg 2x" alt="Постройка 2" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
