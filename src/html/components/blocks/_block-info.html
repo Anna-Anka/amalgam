@@ -1,0 +1,51 @@
+<section class="block-info @class section">
+    <div class="container">
+
+        <div class="block-info__item block-info__item--small">
+            <h2 class="block-info__title title">
+                @title
+            </h2>
+        </div>
+
+        <div class="block-info__row">
+            <div class="block-info__item block-info__item--small">
+                <div class="block-info__subtext">
+                    @for (var i = 0; i < subtext.length; i++) { <p> `+subtext[i]+` </p> }
+
+                        @if(typeof subList !== 'undefined' && subList) {
+                        <ul>
+                            @for (var i = 0; i < subList.length; i++) { <li> `+subList[i]+` </li> }
+                        </ul>
+                        }
+                </div>
+            </div>
+            <div class="block-info__item block-info__item--big">
+                <div class="block-info__text">
+                    @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+                </div>
+            </div>
+        </div>
+        <div class="block-info__images">
+            <div class="block-info__row block-info__row--images">
+                <div class="block-info__item block-info__item--small">
+                    <div class="block-info__image">
+                        <picture>
+                            <source srcset="img/@imageSmall.avif 1x, img/@imageSmall@2x.avif 2x" type="image/avif">
+                            <source srcset="img/pages/modular/advantages/small.webp 1x, img/@imageSmall@2x.webp 2x" type="image/webp">
+                            <img src="img/@imageSmall.jpg" srcset="img/@imageSmall@2x.jpg 2x" alt="altSmall" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+                <div class="block-info__item block-info__item--big">
+                    <div class="block-info__image">
+                        <picture>
+                            <source srcset="img/@imageBig.avif 1x, img/@imageBig@2x.avif 2x" type="image/avif">
+                            <source srcset="img/@imageBig.webp 1x, img/@imageBig@2x.webp 2x" type="image/webp">
+                            <img src="img/@imageBig.jpg" srcset="img/@imageBig@2x.jpg 2x" alt="@altBig" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
