@@ -1,0 +1,56 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Модульные столовые под ключ',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'tag': 'section',
+    'bg': '9',
+    'title': 'Модульные столовые под ключ от производителя в Новосибирске',
+    'titleTag': 'h1',
+    'list': ['Комплектация технологического оборудования', 'Соответствие санитарным нормам'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./components/blocks/_plans.html')
+
+    @include('./components/blocks/_block-info.html', {
+    'title': '<span class="title__accent">Особенности</span> модульных столовых',
+    'subtext': ['Модульная столовая — это долговечное, комфортное и тёплое здание, способное удовлетворить самые высокие требования. Столовая может быть полного и доготовочного цикла, на большое количество посадочных мест для посетителей.'],
+    'text': ['Наши модульные столовые быстро изготавливаются, экономично доставляются в любую точку, легко возводятся при любых погодных условиях. Мы выполняем качественные проекты ТХ и поставляем все профессиональное оборудование, а также мебель и посуду для максимально быстрого начала функционирования столовой. Важнейшим моментом в столовой являются правильно спроектированные и смонтированные инженерные сети, что мы с успехом осуществляем: вентиляция, кондиционирование, пожарная сигнализация и конечно электро — и водоснабжение.', 'Если у вас нет готового технического задания на столовую, опытные менеджеры окажут помощь в его составлении. Наша команда гарантирует качество и профессионализм в каждом аспекте проекта.'],
+    'imageSmall': 'pages/canteens/features/small',
+    'altSmall': 'Столовая внутри',
+    'imageBig': 'pages/canteens/features/big',
+    'altBig': 'Столовая снаружи'
+    })
+
+    @include('./pages/canteens-page/_canteens-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_realized-projects.html')
+    @include('./components/blocks/_produced.html')
+
+    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_brands.html')
+    @include('./components/blocks/_questions.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
