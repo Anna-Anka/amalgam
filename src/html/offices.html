@@ -1,0 +1,57 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Модульные АБК под ключ',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'class': 'offices-hero',
+    'tag': 'section',
+    'bg': '8',
+    'title': 'Модульные офисы под ключ от производителя в Новосибирске',
+    'titleTag': 'h1',
+    'list': ['Автономность инженерных сетей', 'Современная отделка'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./components/blocks/_plans.html')
+
+    @include('./components/blocks/_block-info.html', {
+    'title': '<span class="title__accent">Особенности</span> модульных офисов',
+    'subtext': ['Модульное здание Офис — это современное здание, отвечающее самым главным требованиям: надёжность, скорость возведения, эстетичный внешний вид и удобное планировочное решение! При назначении модульного здания, как например Отдел продаж — архитекторы компании «Амальгама» разрабатывают индивидуальное дизайнерское решение, учитывая требования Заказчика.'],
+    'text': ['Модульное здание — это максимальная заводская готовность, а значит офис будет служить сотрудникам и приносить пользу в самые короткие сроки, а в случае необходимости его с лёгкостью можно перевезти на новое место. Зачастую при строительстве Офисов мы предлагаем стильную внутреннюю и наружную отделку, витражное остекление и необходимые инженерные сети, учитывая все пожелания и требования Технического задания.', 'Примеры Офисов и Отделов продаж можно посмотреть в реализованных объектах!', 'Если вам необходим офис или консультация по быстровозводимым зданиям, обратитесь к нам любым удобным способом и квалифицированные менеджеры окажут необходимую помощь и предложат варианты реализации вашего проекта'],
+    'imageSmall': 'pages/offices/features/small',
+    'altSmall': 'офис внутри',
+    'imageBig': 'pages/offices/features/big',
+    'altBig': 'Офис снаружи'
+    })
+
+    @include('./pages/offices-page/_offices-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_realized-projects.html')
+    @include('./components/blocks/_produced.html')
+
+    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_brands.html')
+    @include('./components/blocks/_questions.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
