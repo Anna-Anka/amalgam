@@ -1,0 +1,56 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Модульные АБК под ключ',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'tag': 'section',
+    'bg': '7',
+    'title': 'Модульные АБК под ключ от производителя в Новосибирске',
+    'titleTag': 'h1',
+    'list': ['Долговечность, надёжность, комфорт', 'Автономность инженереных сетей'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./components/blocks/_plans.html')
+
+    @include('./components/blocks/_block-info.html', {
+    'title': '<span class="title__accent">Особенности</span> модульных АБК',
+    'subtext': ['Здание АБК компании ООО «Амальгама» - это быстровозводимое здание с максимальной заводской готовностью для обеспечения людей удобными рабочими местами и комфортным отдыхом. Модульные АБК возводятся до трёх этажей и могут включать в себя отсеки для проживания сотрудников, полностью организовывая их быт.'],
+    'text': ['Площадь здания может значительно варьироваться, например, офис на 3 рабочих места и административно-бытовой комплекс на 200 рабочих мест с зоной отдыха и более. Существенным преимуществом модульного АБК несомненно является его способность к быстрому увеличению, при увеличении числа сотрудников легко достроить нужное количество новых модулей. Мы поставляем здания по всей стране, учитываем регион эксплуатации с его климатическими условиями и требованиями. Здания поставляются «под ключ» со всей необходимой комплектацией, желаемой отделкой и инженерными сетями. В модульном АБК сотрудникам удобно, тепло и уютно.', 'Наши менеджеры подготовят планировочное решение в кратчайшие сроки под ваши требования или предложат готовое.'],
+    'imageSmall': 'pages/abc/features/small',
+    'altSmall': 'Вахта',
+    'imageBig': 'pages/abc/features/big',
+    'altBig': 'Вахтовый поселок'
+    })
+
+    @include('./pages/abc-page/_abc-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_realized-projects.html')
+    @include('./components/blocks/_produced.html')
+
+    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_brands.html')
+    @include('./components/blocks/_questions.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
