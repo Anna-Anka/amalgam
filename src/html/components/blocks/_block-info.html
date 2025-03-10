@@ -21,7 +21,15 @@
             </div>
             <div class="block-info__item block-info__item--big">
                 <div class="block-info__text">
+                    @if(typeof text !== 'undefined' && text) {
                     @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+                        }
+
+                        @if(typeof list !== 'undefined' && list) {
+                        <ul>
+                            @for (var i = 0; i < list.length; i++) { <li> `+list[i]+` </li> }
+                        </ul>
+                        }
                 </div>
             </div>
         </div>

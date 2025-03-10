@@ -1,0 +1,56 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Жилые моудли',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'tag': 'section',
+    'bg': '11',
+    'title': 'Качественные жилые модули от производителя в Новосибирске',
+    'titleTag': 'h1',
+    'list': ['Адаптация под разный климат', 'Внутренняя отделка и полная комплектация'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./components/blocks/_plans.html')
+
+    @include('./components/blocks/_block-info.html', {
+    'title': '<span class="title__accent">Особенности</span> жилых модулей',
+    'subtext': ['Жилые модули могут устанавливаться как отдельностоящие бытовки, а также совмещаться между собой и устанавливаться в 2 и в 3 этажа. В случае необходимости увеличения площади и пространства, модули можно с легкостью соединить между собой'],
+    'list': ['Возможность использования модулей круглый год в любых климатических условиях, благодаря правильному подбору толщины утеплителя.', 'В базовую комплектацию модуля входит пластиковое окно, металлическая дверь, внутренняя отделка и электроснабжение.', 'Комплектуем модули от кроватей и умывальников до постельного белья.', 'Поставка в собранном виде и в состоянии транспак.', 'Менеджеры «Амальгамы» оперативно проконсультируют и подготовят для Вас предложение!'],
+    'imageSmall': 'pages/living-modules/features/small',
+    'altSmall': 'Столовая внутри',
+    'imageBig': 'pages/living-modules/features/big',
+    'altBig': 'Столовая снаружи'
+    })
+
+    @include('./pages/living-modules-page/_living-modules-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_realized-projects.html')
+    @include('./components/blocks/_produced.html')
+
+    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_brands.html')
+    @include('./components/blocks/_questions.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
