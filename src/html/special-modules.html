@@ -1,5 +1,5 @@
 @include('./settings/_head.html', {
-'title' : 'Амальгама | Строительство отдельный блок-модулей',
+'title' : 'Амальгама | Специализированные модули',
 'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
 'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
 'robots' : 'noindex, nofollow',
@@ -15,21 +15,20 @@
 <div class="main">
     @include('./components/blocks/_hero.html', {
     'tag': 'section',
-    'bg': '10',
-    'title': 'Качественные модули от производителя в Новосибирске',
+    'bg': '15',
+    'title': 'Качественные специализированные модули от производителя в Новосибирске',
     'titleTag': 'h1',
-    'list': ['Скорость — наша визитная карточка', '«Транспак» - экономия места для перевозки'],
+    'list': ['Адаптация под разный климат', 'Внутренняя отделка и полная комплектация'],
     'name-id': 'hero-name',
     'phone-id': 'hero-phone',
     'email-id': 'hero-email'
     })
 
-    @include('./components/blocks/_modular-directions.html')
+    @include('./components/blocks/_plans.html')
 
-    @include('./pages/separate-modules-page/_separate-modules-compare.html')
+    @include('./pages/special-modules-page/_special-modules-features.html')
 
-    @include('./pages/separate-modules-page/_separate-modules-demo.html')
-
+    @include('./pages/special-modules-page/_special-modules-advantages.html')
 
     @include('./components/blocks/_promo.html', {
     'name-id': 'promo-name',
@@ -38,7 +37,7 @@
     })
 
     @include('./components/blocks/_realized-projects.html')
-    @include('./components/blocks/_geography.html')
+    @include('./components/blocks/_produced.html')
 
     @include('./components/blocks/_reviews.html')
     @include('./components/blocks/_brands.html')
