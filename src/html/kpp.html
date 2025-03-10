@@ -1,0 +1,57 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Жилые моудли',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'tag': 'section',
+    'bg': '12',
+    'title': 'Качественные модульные КПП от производителя в Новосибирске',
+    'titleTag': 'h1',
+    'list': ['Адаптация под разный климат', 'Внутренняя отделка и полная комплектация'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./components/blocks/_plans.html')
+
+    @include('./components/blocks/_block-info.html', {
+    'title': '<span class="title__accent">Особенности</span> модульных кпп',
+    'subtext': ['Модульный контрольно-пропускной пункт (КПП) — это комплексная система, предназначенная для организации и обеспечения безопасного прохода людей и транспортных средств через определённые территории или объекты'],
+    'list': ['Быстрая установка и лёгкое перемещение', 'Размер окон обеспечивает панорамный обзор территории', 'Качественные двери обеспечивают безопасность', 'Установка турникетов'],
+    'text': ['Одним из ключевых преимуществ модульных КПП является их лёгкость и мобильность. Они легко устанавливаются, что позволяет эффективно управлять проходными пунктами в разных местах и в разное время. Благодаря модульной конструкции, КПП можно оперативно переставить и перевезти. Помимо функциональности и безопасности, модульные КПП могут также иметь эстетическую ценность. Их дизайн может быть разнообразным и адаптироваться к архитектурным особенностям объекта или территории, на которой они размещаются.', 'Менеджеры «Амальгамы» оперативно проконсультируют и подготовят для вас предложение'],
+    'imageSmall': 'pages/kpp/features/small',
+    'altSmall': 'КПП 1',
+    'imageBig': 'pages/kpp/features/big',
+    'altBig': 'КПП 2'
+    })
+
+    @include('./pages/kpp-page/_kpp-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_realized-projects.html')
+    @include('./components/blocks/_produced.html')
+
+    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_brands.html')
+    @include('./components/blocks/_questions.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')

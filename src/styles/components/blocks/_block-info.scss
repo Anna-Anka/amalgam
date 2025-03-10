@@ -77,6 +77,12 @@
 		}
 	}
 
+	&__items {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
 	&__images {
 		@include mq(md, min) {
 			position: relative;
