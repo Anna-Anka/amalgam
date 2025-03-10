@@ -1,0 +1,57 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Санитарные модули',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'tag': 'section',
+    'bg': '13',
+    'title': 'Качественные санитарные модули от производителя в Новосибирске',
+    'titleTag': 'h1',
+    'list': ['Адаптация под разный климат', 'Внутренняя отделка и полная комплектация'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./components/blocks/_plans.html')
+
+    @include('./components/blocks/_block-info.html', {
+    'title': '<span class="title__accent">Особенности</span> санитарных модулей',
+    'subtext': ['Система обеспечения горячей и холодной воды зависят от технических условий объекта эксплуатации. При отсутствии центральных сетей водоснабжения, предлагаем к установке баки для холодной воды (объём рассчитывается индивидуально) и электроводонагреватели-бойлеры. В комплект поставки может входить септик и система глубокой отчистки воды.'],
+    'list': ['Подключение к центральным сетям водоснабжения и канализации', 'Организация автономной системы подачи холодной и горячей воды', 'Установка сантехнических приборов в заводских условиях с испытанием систем', 'Гидроизоляционные материалы отделки', 'Моментальная установка в месте использования', 'Изготовление 100% автономных сантехнических модулей', 'Санитарные модули — это неотъемлемая часть организации бытовых условий для людей. Санитарные помещения: душевые, туалеты, умывальные, прачечные и пр.', 'Количество приборов и их класс (от элитных до антивандальных) зависят от типа использования и пожеланий Заказчика.'],
+    'text': ['Наши менеджеры помогут подобрать оптимальное количество приборов и сделают лучшее предложение!'],
+    'imageSmall': 'pages/sanitary-modules/features/small',
+    'altSmall': 'КПП 1',
+    'imageBig': 'pages/sanitary-modules/features/big',
+    'altBig': 'КПП 2'
+    })
+
+    @include('./pages/sanitary-modules-page/_sanitary-modules-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_realized-projects.html')
+    @include('./components/blocks/_produced.html')
+
+    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_brands.html')
+    @include('./components/blocks/_questions.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
