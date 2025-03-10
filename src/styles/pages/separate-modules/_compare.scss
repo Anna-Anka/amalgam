@@ -1,0 +1,102 @@
+.compare {
+	background-color: var(--color-blue-50);
+
+	&__row {
+		@include flex-simple(70px);
+
+		height: 100%;
+
+		@include mq(lg) {
+			overflow-x: auto;
+			gap: 30px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+
+		&:last-child {
+			.compare__column {
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	&__column {
+		border-bottom: 1px solid var(--color-blue-100);
+		padding: 12px 0;
+		width: 100%;
+
+		@include mq(md) {
+			min-width: 308px;
+		}
+
+		&--logo {
+			@include flex-alignment(0);
+
+			padding: 12px;
+			height: 95px;
+
+			img {
+				width: 255px;
+				height: 70px;
+				object-fit: contain;
+
+				@include mq(md) {
+					width: 200px;
+					height: 56px;
+				}
+			}
+		}
+
+		&--light {
+			background-color: var(--color-white);
+		}
+
+		&--dark {
+			background-color: var(--color-blue-300);
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		margin-bottom: 12px;
+	}
+
+	&__text {
+		@include paragraph-mb;
+
+		font-size: 14px;
+	}
+
+	&__image {
+		@include resize-picture(46%);
+
+		margin: 0 auto;
+		width: 100%;
+		max-width: 312px;
+
+		img {
+			object-fit: contain;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 16px;
+		font-size: 14px;
+
+		&::before {
+			@include circle;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+}
