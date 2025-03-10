@@ -1,0 +1,37 @@
+<section class="demo section">
+    <div class="container">
+        <h2 class="demo__title title">
+            <span class="title__accent">Удобно</span> собрать, жить и работать
+        </h2>
+        <ul class="demo__items">
+            <li class="demo__item">
+                @include('../../components/cards/_demo-card.html', {
+                'img': 'pages/separate-modules/comfortable/building',
+                'alt': '',
+                'list': ['Технология «транспак» позволяет перевозить 6–8 модулей на одной машине', 'Легко собирать самим: на 1 модуль уйдёт 3 часа']
+                })
+            </li>
+            <li class="demo__item">
+                @include('../../components/cards/_demo-card.html', {
+                'img': 'pages/separate-modules/comfortable/building',
+                'alt': '',
+                'list': ['Можно быстро заменить испорченную панель', 'Панели с окнами и дверями можно менять местами']
+                })
+            </li>
+            <li class="demo__item">
+                @include('../../components/cards/_demo-card.html', {
+                'img': 'pages/separate-modules/comfortable/building',
+                'alt': '',
+                'list': ['Объединяйте модули без ограничений по площади', 'Устанавливайте модули друг на друга']
+                })
+            </li>
+            <li class="demo__item">
+                @include('../../components/cards/_demo-card.html', {
+                'img': 'pages/separate-modules/comfortable/move',
+                'alt': '',
+                'list': ['Перемещайте модули, если стройка двигается']
+                })
+            </li>
+        </ul>
+    </div>
+</section>
