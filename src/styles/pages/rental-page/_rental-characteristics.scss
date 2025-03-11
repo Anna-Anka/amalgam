@@ -35,39 +35,3 @@
 		@include flex-alignment(30px, space-between, center);
 	}
 }
-
-.image-slider {
-	width: 100%;
-
-	&__swiper {
-		position: relative;
-	}
-
-	&__picture {
-		@include resize-picture(74%);
-
-		border-radius: 16px;
-
-		@include mq(lg) {
-			border-radius: 8px;
-		}
-	}
-
-	&__buttons {
-		@include swiper-buttons;
-
-		position: absolute;
-		right: 12px;
-		bottom: 12px;
-	}
-
-	&__button {
-		background-color: var(--color-white);
-
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: var(--color-blue-50);
-			}
-		}
-	}
-}
