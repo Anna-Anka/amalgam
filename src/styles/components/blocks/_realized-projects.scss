@@ -40,10 +40,16 @@
 			width: 100%;
 			max-width: 685px;
 		}
-	}
 
-	&__title {
-		margin-bottom: 12px;
+		.realized-projects {
+			&__title {
+				margin-bottom: 12px;
+
+				@include mq(lg) {
+					margin-bottom: 12px;
+				}
+			}
+		}
 	}
 
 	&__text {

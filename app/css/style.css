@@ -3875,7 +3875,7 @@ body {
   margin-bottom: 18px;
 }
 
-.realized-projects__title {
+.realized-projects__header .realized-projects__title {
   margin-bottom: 12px;
 }
 
@@ -5888,6 +5888,21 @@ body {
   object-fit: cover;
 }
 
+.projects-page .realized-projects__items {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.projects-page .realized-projects__items:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.projects-page .realized-projects__button {
+  margin: 0 auto;
+}
+
 @media only screen and (min-width: 560px) {
   .hero__form {
     max-width: 345px;
@@ -6261,6 +6276,10 @@ body {
 
   .demo__items {
     gap: 40px;
+  }
+
+  .realized-projects__header .realized-projects__title {
+    margin-bottom: 12px;
   }
 
   .realized-projects .tabs__nav {
@@ -6859,6 +6878,12 @@ body {
 
   .about-demo__image {
     padding-bottom: 56%;
+  }
+
+  .projects-page .realized-projects__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 

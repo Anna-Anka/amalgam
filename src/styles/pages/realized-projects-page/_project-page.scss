@@ -1,0 +1,20 @@
+.projects-page {
+	.realized-projects {
+		&__items {
+			@include grid(repeat(auto-fit, minmax(260px, 1fr)));
+
+			&:not(:last-child) {
+				margin-bottom: 32px;
+			}
+
+			@include mq(sm) {
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+		}
+
+		&__button {
+			margin: 0 auto;
+		}
+	}
+}
