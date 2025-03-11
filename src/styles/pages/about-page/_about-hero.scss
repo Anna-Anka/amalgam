@@ -1,0 +1,47 @@
+.about-hero {
+	padding-top: 0;
+
+	&__wrapper {
+		@include flex-alignment(30px, space-between, center);
+
+		@include mq(lg) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+	}
+
+	&__content {
+		width: 100%;
+
+		@include mq(lg, min) {
+			max-width: 404px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 12px;
+
+		@include mq(lg) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__video {
+		position: relative;
+		padding-bottom: 37%;
+		width: 100%;
+		max-width: 904px;
+
+		@include mq(lg) {
+			padding-bottom: 56%;
+			max-width: 100%;
+		}
+
+		video {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
