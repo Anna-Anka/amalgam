@@ -17,6 +17,17 @@
     @include('./pages/about-page/_about-advantages.html')
     @include('./pages/about-page/_about-federal-projects.html')
     @include('./pages/about-page/_about-staff.html')
+    @include('./pages/about-page/_about-features.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_documents.html')
+
+    @include('./components/blocks/_geography.html')
 </div>
 
 @include('./components/blocks/_footer.html')

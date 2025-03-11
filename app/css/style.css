@@ -4027,6 +4027,18 @@ body {
   color: var(--color-blue-300);
 }
 
+.advantages--blue {
+  background-color: var(--color-blue-50);
+}
+
+.advantages--blue .advantage-card {
+  background-color: var(--color-white);
+}
+
+.advantages--blue .advantage-card--accent {
+  background-color: var(--color-orange-500);
+}
+
 .advantages__items {
   display: -ms-grid;
   display: grid;
@@ -5312,14 +5324,6 @@ body {
   -ms-flex-item-align: start;
   align-self: flex-start;
   width: 100%;
-}
-
-.home-advantages {
-  background-color: var(--color-blue-50);
-}
-
-.home-advantages .advantage-card {
-  background-color: var(--color-white);
 }
 
 .camps-advantages__wrapper {

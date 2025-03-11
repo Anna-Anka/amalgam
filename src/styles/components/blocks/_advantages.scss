@@ -1,4 +1,16 @@
 .advantages {
+	&--blue {
+		background-color: var(--color-blue-50);
+
+		.advantage-card {
+			background-color: var(--color-white);
+
+			&--accent {
+				background-color: var(--color-orange-500);
+			}
+		}
+	}
+
 	&__items {
 		@include grid(repeat(auto-fit, minmax(315px, 1fr)), 30px);
 	}
