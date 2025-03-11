@@ -5669,6 +5669,18 @@ body {
   height: 100%;
 }
 
+.about-advantages {
+  padding-top: 0;
+}
+
+.about-advantages__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 30px;
+}
+
 @media only screen and (min-width: 560px) {
   .hero__form {
     max-width: 345px;
@@ -6203,6 +6215,12 @@ body {
     padding-bottom: 56%;
     max-width: 100%;
   }
+
+  .about-advantages__items {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -6444,6 +6462,10 @@ body {
 
   .compare__text p:not(:last-child) {
     margin-bottom: 6px;
+  }
+
+  .about-advantages {
+    padding-top: 0;
   }
 }
 

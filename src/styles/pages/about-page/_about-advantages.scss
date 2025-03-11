@@ -1,0 +1,16 @@
+.about-advantages {
+	padding-top: 0;
+
+	@include mq(md) {
+		padding-top: 0;
+	}
+
+	&__items {
+		@include grid(1fr 2fr 1fr);
+
+		@include mq(lg) {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+	}
+}
