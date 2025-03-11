@@ -1,0 +1,44 @@
+<section class="advantages advantages--blue section">
+    <div class="container">
+        <h2 class="advantages__title title">
+            Комфорт рабочих <span class="title__accent">повышает их продуктивность</span>
+        </h2>
+        <ul class="advantages__items">
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Комфорт',
+                'text': ['Бытовка утеплена так, что летом в ней прохладно, а зимой не холодно'],
+                'icon': 'star',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Комплектация',
+                'text': ['Полностью выполняем требования клиента по комплектации'],
+                'icon': 'pin',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Доставка',
+                'text': ['Доставим в любую точку Новосибирска на ваш объект'],
+                'icon': 'car',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Размещение',
+                'text': ['Наши бытовки вмещают до 8 человек в зависимости от назначения'],
+                'icon': 'clock',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_advantage-card.html', {
+                'title': 'Любые объемы',
+                'text': ['Поставим вам один вагончик или обеспечим помещениями всю вашу сеть'],
+                'icon': 'open-arm',
+                })
+            </li>
+        </ul>
+    </div>
+</section>

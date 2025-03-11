@@ -1,0 +1,22 @@
+.characteristics {
+	&__item {
+		@include flex-simple(20px);
+
+		justify-content: space-between;
+		border-bottom: 1px solid var(--color-blue-100);
+		padding: 12px 0;
+	}
+
+	&__key {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.2;
+		color: var(--color-blue-300);
+	}
+
+	&__value {
+		font-size: 14px;
+		line-height: 1.4;
+		text-align: right;
+	}
+}

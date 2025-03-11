@@ -188,6 +188,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider_documents_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./slider/_documents-slider.js */ "./src/js/project/slider/_documents-slider.js");
 /* harmony import */ var _slider_reviews_slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider/_reviews-slider.js */ "./src/js/project/slider/_reviews-slider.js");
 /* harmony import */ var _slider_brands_slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./slider/_brands-slider.js */ "./src/js/project/slider/_brands-slider.js");
+/* harmony import */ var _slider_image_slider_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./slider/_image-slider.js */ "./src/js/project/slider/_image-slider.js");
+
 
 
 
@@ -301,6 +303,34 @@ if (document.querySelector('.home-hero__swiper')) {
     navigation: {
       nextEl: '.home-hero__button--next',
       prevEl: '.home-hero__button--prev'
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/project/slider/_image-slider.js":
+/*!************************************************!*\
+  !*** ./src/js/project/slider/_image-slider.js ***!
+  \************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.A11y, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+if (document.querySelector('.image-slider__swiper')) {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.image-slider__swiper', {
+    loop: true,
+    speed: 800,
+    slidesPerGroup: 1,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.image-slider__button--next',
+      prevEl: '.image-slider__button--prev'
     }
   });
 }
