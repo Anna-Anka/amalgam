@@ -1,0 +1,53 @@
+.federal-projects {
+	@include flex-simple(60px, column);
+
+	background-color: var(--color-blue-50);
+
+	@include mq(lg) {
+		gap: 40px;
+	}
+
+	&__wrapper {
+		@include flex-simple(30px);
+
+		@include mq(lg) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		width: 100%;
+
+		@include mq(lg, min) {
+			max-width: 540px;
+		}
+	}
+
+	&__text {
+		@include paragraph-mb;
+	}
+
+	&__image {
+		@include resize-picture(30%);
+
+		border-radius: 16px;
+		width: 100%;
+		max-width: 764px;
+
+		@include mq(lg) {
+			border-radius: 8px;
+			padding-bottom: 50%;
+			max-width: 100%;
+		}
+	}
+
+	.brands {
+		&__swiper {
+			margin-bottom: 24px;
+
+			@include mq(lg) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+}
