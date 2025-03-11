@@ -1,0 +1,63 @@
+.about-demo {
+	&__title {
+		width: 100%;
+
+		@include mq(lg, min) {
+			max-width: 882px;
+		}
+	}
+
+	&__wrapper {
+		@include flex-simple;
+
+		@include mq(lg) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__video {
+		@include resize-video(37%);
+
+		border-radius: 16px;
+		width: 100%;
+		max-width: 882px;
+
+		@include mq(lg) {
+			border-radius: 8px;
+			padding-bottom: 60%;
+			max-width: 100%;
+		}
+	}
+
+	&__images {
+		@include flex-simple(20px, column);
+
+		width: 100%;
+		max-width: 426px;
+
+		@include mq(lg) {
+			flex-direction: row;
+			max-width: 100%;
+		}
+
+		@include mq(sm) {
+			flex-direction: column;
+		}
+	}
+
+	&__image {
+		@include resize-picture(56%);
+
+		border-radius: 8px;
+
+		@include mq(lg) {
+			padding-bottom: 26%;
+			width: 100%;
+		}
+
+		@include mq(sm) {
+			padding-bottom: 56%;
+		}
+	}
+}

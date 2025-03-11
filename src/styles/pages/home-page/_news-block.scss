@@ -40,22 +40,14 @@
 	}
 
 	&__video {
-		position: relative;
+		@include resize-video(57%);
+
 		border-radius: 20px;
-		padding-bottom: 57%;
 		width: 100%;
 
 		@include mq(lg, min) {
 			padding-bottom: 28%;
 			max-width: 654px;
-		}
-
-		video {
-			position: absolute;
-			inset: 0;
-			border-radius: inherit;
-			width: 100%;
-			height: 100%;
 		}
 	}
 
