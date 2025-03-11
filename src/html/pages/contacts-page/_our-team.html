@@ -1,0 +1,101 @@
+<section class="our-team section">
+    <div class="container">
+        <h2 class="our-team__title title">
+            наша <span class="title__accent">команда</span>
+        </h2>
+        <ul class="our-team__items">
+            <li class="our-team__item">
+                @include('../../components/cards/_person-card.html', {
+                'img': 'lyubimova',
+                'alt': 'Любимова',
+                'title': 'Любимова Элеонора Сергеевна',
+                'subtitle': 'Руководитель отдела персонала',
+                'hrefTel': '+79139002578',
+                'tel': '+7-913-900-25-78',
+                'mailto': 'hr@a-gama.ru'
+                })
+            </li>
+            <li class="our-team__item">
+                @include('../../components/cards/_person-card.html', {
+                'img': 'platycin',
+                'alt': 'Платицин',
+                'title': 'Платицин Никита Анатольевич',
+                'subtitle': 'Руководитель отдела логистики',
+                'hrefTel': '+79137770125',
+                'tel': '+7-913-777-01-25',
+                'mailto': 'log@a-gama.ru'
+                })
+            </li>
+            <li class="our-team__item">
+                @include('../../components/cards/_person-card.html', {
+                'img': 'vostrikova',
+                'alt': 'Вострикова',
+                'title': 'Вострикова Светлана Сергеевна',
+                'subtitle': 'Руководитель отдела продаж',
+                'hrefTel': '+79137770125',
+                'tel': '+7-913-777-01-25',
+                'mailto': 'log@a-gama.ru'
+                })
+            </li>
+            <li class="our-team__item">
+                @include('../../components/cards/_person-card.html', {
+                'img': 'semyonov',
+                'alt': 'Семёнов',
+                'title': 'Семёнов Дмитрий',
+                'subtitle': 'Руководитель отдела снабжения',
+                'hrefTel': '+79134823015',
+                'tel': '+7-913-482-30-15',
+                'mailto': 'snab@a-gama.ru'
+                })
+            </li>
+            <li class="our-team__item">
+                @include('../../components/cards/_person-card.html', {
+                'img': 'timchenko',
+                'alt': 'Тимченко',
+                'title': 'Тимченко Александр',
+                'subtitle': 'Менеджер по продажам',
+                'hrefTel': '+79137271814',
+                'tel': '+7-913-727-18-14',
+                'mailto': 's1@a-gama.ru'
+                })
+            </li>
+            <li class="our-team__item">
+                @include('../../components/cards/_person-card.html', {
+                'img': 'yarokhno',
+                'alt': 'Ярохно',
+                'title': 'Ярохно Ирина',
+                'subtitle': 'Менеджер по продажам',
+                'hrefTel': '+79132016271',
+                'tel': '+7-913-201-62-71',
+                'mailto': 's3@a-gama.ru'
+                })
+            </li>
+            <li class="our-team__item">
+                @include('../../components/cards/_person-card.html', {
+                'img': 'safronova',
+                'alt': 'Сафронова',
+                'title': 'Сафронова Олеся',
+                'subtitle': 'Менеджер по продажам',
+                'hrefTel': '+79134866323',
+                'tel': '+7-913-486-63-23',
+                'mailto': 's5@a-gama.ru'
+                })
+            </li>
+            <li class="our-team__item">
+                <div class="our-team__question">
+                    <div class="our-team__subhead">
+                        <span class="our-team__subtitle subtitle">
+                            Задайте вопрос специалисту
+                        </span>
+                        <span class="our-team__subtext">
+                            Напиште ваш вопрос и оставьте ваши контактные данные
+                        </span>
+                    </div>
+                    <button class="our-team__button button button--light" type="button">
+                        Оставить заявку
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>

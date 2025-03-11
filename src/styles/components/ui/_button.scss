@@ -51,6 +51,15 @@
 		}
 	}
 
+	&--light {
+		color: var(--color-blue-300);
+		background-color: var(--color-white);
+
+		&:focus-visible {
+			border-color: var(--color-blue-300);
+		}
+	}
+
 	svg {
 		width: 24px;
 		height: 24px;
