@@ -15,14 +15,19 @@
 <h1 class="sr-only">Быстровозводимые здания</h1>
 <div class="main">
     @include('./pages/home-page/_home-hero.html')
+
     @include('./pages/home-page/_directions.html')
     @include('./components/blocks/_promo.html', {
     'name-id': 'promo-name',
     'phone-id': 'promo-phone',
     'email-id': 'promo-email'
     })
+
     @include('./pages/home-page/_demo.html')
-    @include('./components/blocks/_building-advantages.html')
+
+    @include('./components/blocks/_building-advantages.html', {
+    'class': 'building-advantages--blue'
+    })
 
     @include('./components/blocks/_realized-projects.html', {
     'class': 'realized-projects--dark'
@@ -37,10 +42,13 @@
     })
 
     @include('./pages/home-page/_home-advantages.html')
+
     @include('./components/blocks/_documents.html')
+
     @include('./pages/home-page/_news-block.html')
 
     @include('./components/blocks/_reviews.html')
+
     @include('./components/blocks/_brands.html')
 </div>
 

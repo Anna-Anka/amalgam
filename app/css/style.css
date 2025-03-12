@@ -3876,7 +3876,7 @@ body {
   gap: 36px 50px;
 }
 
-.building-advantages {
+.building-advantages--blue {
   background-color: var(--color-blue-50);
 }
 
@@ -6173,6 +6173,141 @@ body {
   margin-top: auto;
 }
 
+.planning-block__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.planning-block__wrapper:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.planning-block__visual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--color-blue-70);
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+}
+
+.planning-block__swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.planning-block__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.planning-block__image {
+  position: relative;
+  padding-bottom: 26%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.planning-block__image picture,
+.planning-block__image img {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.planning-block__image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.planning-block__image img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.planning-block__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.planning-block__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.planning-block__button {
+  background-color: var(--color-blue-50);
+}
+
+.planning-block .characteristics {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  gap: 0 30px;
+  counter-reset: characteristics;
+}
+
+.planning-block .characteristics__item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.planning-block .characteristics__key {
+  position: relative;
+}
+
+.planning-block .characteristics__key::before {
+  counter-increment: characteristics;
+  content: counter(characteristics) ".";
+}
+
 @media only screen and (min-width: 560px) {
   .hero__form {
     max-width: 345px;
@@ -6399,6 +6534,17 @@ body {
   .our-contacts__map {
     border-radius: 16px;
     max-width: 882px;
+  }
+
+  .planning-block__visual {
+    width: 66%;
+  }
+
+  .planning-block__about {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 40%;
   }
 }
 
@@ -6838,6 +6984,18 @@ body {
   .our-contacts__subtitle {
     font-size: 16px;
   }
+
+  .planning-block__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .planning-block__wrapper:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -7144,6 +7302,10 @@ body {
   .our-team__subtitle:not(:last-child) {
     margin-bottom: 6px;
   }
+
+  .planning-block .characteristics {
+    gap: 0 20px;
+  }
 }
 
 @media only screen and (max-width: 559px) {
@@ -7365,6 +7527,16 @@ body {
 
   .home-hero__button:hover {
     background-color: var(--color-white);
+  }
+
+  .planning-block__image:hover {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  .planning-block__button:hover {
+    background-color: var(--color-blue-70);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Планировка',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'tag': 'section',
+    'bg': '10',
+    'title': 'общежитие на 200 человек',
+    'titleTag': 'h1',
+    'list': ['Строим в короткие сроки', 'Круглогодичное строительство'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./pages/planning-page/_planning-block.html')
+
+    @include('./pages/planning-page/_planning-advantages.html')
+
+    @include('./components/blocks/_building-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_realized-projects.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')

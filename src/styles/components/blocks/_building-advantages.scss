@@ -1,5 +1,7 @@
 .building-advantages {
-	background-color: var(--color-blue-50);
+	&--blue {
+		background-color: var(--color-blue-50);
+	}
 
 	&__title {
 		@include mq(lg, min) {
