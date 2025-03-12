@@ -1,0 +1,105 @@
+.project-hero {
+	padding-top: 20px;
+
+	@include mq(md) {
+		padding-top: 20px;
+	}
+
+	&__wrapper,
+	&__items {
+		&:not(:last-child) {
+			margin-bottom: 32px;
+
+			@include mq(lg) {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	&__wrapper {
+		@include flex-alignment(30px, space-between);
+
+		@include mq(lg) {
+			flex-direction: column;
+			gap: 24px;
+		}
+	}
+
+	&__content {
+		width: 100%;
+
+		@include mq(lg, min) {
+			max-width: 540px;
+		}
+	}
+
+	&__text {
+		@include paragraph-mb;
+	}
+
+	.image-slider {
+		@include mq(lg, min) {
+			width: 57%;
+		}
+	}
+
+	&__items {
+		@include grid(repeat(auto-fit, minmax(270px, 1fr)), 20px 30px);
+
+		@include mq(lg) {
+			gap: 16px;
+		}
+	}
+
+	&__item {
+		@include flex-alignment;
+
+		border-radius: 12px;
+		padding: 24px;
+		text-align: center;
+		background-color: var(--color-blue-50);
+
+		@include mq(lg) {
+			border-radius: 8px;
+			padding: 20px;
+			font-size: 16px;
+		}
+	}
+
+	.characteristics {
+		@include grid(repeat(auto-fit, minmax(428px, 1fr)), 0 30px);
+
+		@include mq(md) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.project-nav {
+	padding: 40px 0;
+
+	@include mq(md) {
+		padding: 30px 0;
+	}
+
+	&__wrapper {
+		@include flex-alignment(30px, center, center);
+
+		@include mq(sm) {
+			flex-direction: column;
+			gap: 12px;
+		}
+	}
+
+	&__link {
+		@include mq(sm) {
+			width: 100%;
+		}
+
+		&--prev {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

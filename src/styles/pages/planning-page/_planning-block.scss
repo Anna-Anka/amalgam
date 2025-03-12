@@ -26,16 +26,6 @@
 		@include mq(lg, min) {
 			width: 66%;
 		}
-
-		// &--small {
-		// 	width: 32%;
-
-		// 	.planning-block {
-		// 		&__image {
-		// 			padding-bottom: 70%;
-		// 		}
-		// 	}
-		// }
 	}
 
 	&__swiper {

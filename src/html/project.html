@@ -1,0 +1,45 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Проект',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+
+<!-- <div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_thank-modal.html')
+</div> -->
+
+<div class="main">
+    @include('./pages/project-page/_project-hero.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    <div class="project-nav">
+        <div class="container">
+            <div class="project-nav__wrapper">
+                <a class="project-nav__link project-nav__link--prev button button--secondary" href="#">
+                    <svg aria-hidden>
+                        <use xlink:href="img/sprite.svg#arrow">
+                    </svg>
+                    Предыдущий проект
+                </a>
+                <a class="project-nav__link button" href="#">
+                    Следующий проект
+                    <svg aria-hidden>
+                        <use xlink:href="img/sprite.svg#arrow">
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
