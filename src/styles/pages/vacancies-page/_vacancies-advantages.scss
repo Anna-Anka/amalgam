@@ -1,0 +1,19 @@
+.vacancies-advantages {
+	.advantages {
+		&__items {
+			@include mq(md) {
+				gap: 20px;
+			}
+		}
+	}
+
+	.advantage-card {
+		align-items: center;
+
+		&__title {
+			@include mq(md) {
+				font-size: 16px;
+			}
+		}
+	}
+}

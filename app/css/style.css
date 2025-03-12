@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Formular";
   src: url("../fonts/Formular-Regular.woff2") format("woff2"), url("../fonts/Formular-Regular.woff") format("woff");
@@ -4117,6 +4119,13 @@ body {
   background-color: var(--color-orange-500);
 }
 
+.advantages__subtitle {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 .advantages__items {
   display: -ms-grid;
   display: grid;
@@ -4986,6 +4995,9 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 16px;
+}
+
+.advantage-card__header:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -6404,6 +6416,121 @@ body {
   transform: rotate(180deg);
 }
 
+.vacancies-advantages .advantage-card {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.vacancies-list .spollers__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.vacancies-list .spollers__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  border: 0;
+  border-radius: 8px;
+  padding: 14px 20px;
+  background-color: var(--color-blue-50);
+}
+
+.vacancies-list .spollers__button::before {
+  display: none;
+}
+
+.vacancies-list .spollers__title:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.vacancies-list .spollers__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 2px 6px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.vacancies-list .spollers__info li {
+  position: relative;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-blue-200);
+}
+
+.vacancies-list .spollers__info li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-orange-500);
+}
+
+.vacancies-list .spollers__more {
+  font-size: 16px;
+}
+
+.vacancies-list .spollers__more::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.vacancies-list .spollers__body {
+  padding: 16px 20px 0;
+}
+
+.vacancies-list .spollers__wrapper {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 30px;
+}
+
+.vacancies-list .spollers__subtitle {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.vacancies-list .spollers__list:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.vacancies-list .spollers__list li {
+  position: relative;
+  padding-left: 15px;
+}
+
+.vacancies-list .spollers__list li::before {
+  content: "— ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 @media only screen and (min-width: 560px) {
   .hero__form {
     max-width: 345px;
@@ -7123,6 +7250,10 @@ body {
     padding: 20px;
     font-size: 16px;
   }
+
+  .vacancies-list .spollers__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -7450,6 +7581,18 @@ body {
   .project-nav {
     padding: 30px 0;
   }
+
+  .vacancies-advantages .advantages__items {
+    gap: 20px;
+  }
+
+  .vacancies-advantages .advantage-card__title {
+    font-size: 16px;
+  }
+
+  .vacancies-list .spollers__wrapper {
+    gap: 16px 20px;
+  }
 }
 
 @media only screen and (max-width: 559px) {
@@ -7563,6 +7706,21 @@ body {
   }
 
   .project-nav__link {
+    width: 100%;
+  }
+
+  .vacancies-list .spollers__button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .vacancies-list .spollers__more {
     width: 100%;
   }
 }

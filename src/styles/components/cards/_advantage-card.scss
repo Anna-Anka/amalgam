@@ -37,7 +37,9 @@
 	&__header {
 		@include flex-alignment(16px, space-between, center);
 
-		margin-bottom: 10px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__icon {

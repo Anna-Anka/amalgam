@@ -11,6 +11,13 @@
 		}
 	}
 
+	&__subtitle {
+		display: block;
+		margin-bottom: 4px;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+
 	&__items {
 		@include grid(repeat(auto-fit, minmax(315px, 1fr)), 30px);
 	}
