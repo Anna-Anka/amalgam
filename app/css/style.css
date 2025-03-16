@@ -67,6 +67,7 @@
   --dvh: 100vh;
   --header-height: 135px;
   --rgba-white-70: rgba(255, 255, 255, 0.7);
+  --rgba-blue-300-55: rgba(64, 68, 78, 0.55);
   --full-screen: calc(var(--dvh) * 100);
 }
 
@@ -1139,6 +1140,100 @@ button.swiper-pagination-bullet {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.graph-modal {
+  --transition-time: 0.3s;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden auto;
+  text-align: center;
+  background-color: var(--rgba-blue-300-55);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity var(--transition-time), visibility var(--transition-time);
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+  cursor: pointer;
+}
+
+.graph-modal::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.graph-modal__container {
+  position: relative;
+  display: inline-block;
+  display: none;
+  vertical-align: middle;
+  margin: 50px auto;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 345px;
+  text-align: left;
+  background-color: var(--color-white);
+  cursor: default;
+}
+
+.graph-modal__close {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/sprite.svg#close");
+  background-color: transparent;
+}
+
+.graph-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity var(--transition-time), visibility var(--transition-time);
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.graph-modal__container.graph-modal-open {
+  display: inline-block;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.fade,
+.fade.animate-open {
+  -webkit-transition: opacity var(--transition-time);
+  transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+  opacity: 1;
+}
+
+.fadeInUp {
+  opacity: 0;
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transform: translateY(-100px);
+}
+
+.fadeInUp,
+.fadeInUp.animate-open {
+  -webkit-transition: opacity var(--transition-time), -webkit-transform var(--transition-time);
+  transition: opacity var(--transition-time), -webkit-transform var(--transition-time);
+  transition: transform var(--transition-time), opacity var(--transition-time);
+  transition: transform var(--transition-time), opacity var(--transition-time), -webkit-transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .tabs__panel {
@@ -7601,6 +7696,10 @@ body {
 }
 
 @media only screen and (max-width: 559px) {
+  .graph-modal__container {
+    width: 90%;
+  }
+
   .header__item--desktop {
     display: none;
   }
