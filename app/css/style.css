@@ -3853,6 +3853,11 @@ body {
   color: var(--color-orange-200);
 }
 
+.promo .form__field--file {
+  border-color: var(--color-orange-100);
+  background-color: transparent;
+}
+
 .promo .form__button {
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;

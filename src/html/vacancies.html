@@ -16,6 +16,12 @@
     @include('./pages/vacancies-page/_vacancies-advantages.html')
 
     @include('./pages/vacancies-page/_vacancies-list.html')
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email',
+    'fileId': 'promo-file'
+    })
 </div>
 
 @include('./components/blocks/_footer.html')

@@ -63,6 +63,11 @@
 			&::placeholder {
 				color: var(--color-orange-200);
 			}
+
+			&--file {
+				border-color: var(--color-orange-100);
+				background-color: transparent;
+			}
 		}
 
 		&__button {

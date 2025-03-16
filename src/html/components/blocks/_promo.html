@@ -23,6 +23,14 @@
                             </label>
                             <input class="form__field" id="@email-id" name="email" type="email" placeholder="Ваш email" required>
                         </div>
+                        @if(typeof fileId !== 'undefined' && fileId) {
+                        <div class="form__item">
+                            <label class="sr-only" for="@fileId">
+                                Прикрепите документ
+                            </label>
+                            <input class="form__field form__field--file" id="@fileId" name="file" type="file" placeholder="Прикрепите документ">
+                        </div>
+                        }
                     </div>
                     <button class="form__button button button--light" type="button">
                         Отправить
