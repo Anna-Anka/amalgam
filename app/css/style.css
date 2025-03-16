@@ -4282,8 +4282,17 @@ body {
   width: 100%;
   text-align: left;
   color: var(--color-white);
-  -webkit-transition: border-color 0.3s;
-  transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s, color 0.3s, border-radius 0.3s, -webkit-box-shadow 0.3s;
+  transition: border-color 0.3s, color 0.3s, border-radius 0.3s, -webkit-box-shadow 0.3s;
+  transition: border-color 0.3s, color 0.3s, box-shadow 0.3s, border-radius 0.3s;
+  transition: border-color 0.3s, color 0.3s, box-shadow 0.3s, border-radius 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.documents__name:focus-visible {
+  outline: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 2px var(--color-orange-500);
+  box-shadow: 0 0 0 2px var(--color-orange-500);
 }
 
 .documents__name svg {
@@ -4296,6 +4305,7 @@ body {
 
 .documents__name--active {
   border-color: var(--color-orange-500);
+  pointer-events: none;
 }
 
 .documents__name--active svg {
@@ -7905,6 +7915,10 @@ body {
 
   .realized-projects__button:hover {
     background-color: var(--color-blue-100);
+  }
+
+  .documents__name:hover {
+    color: var(--color-orange-500);
   }
 
   .documents__button:hover {

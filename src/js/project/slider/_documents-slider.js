@@ -3,11 +3,12 @@ import { A11y, Navigation } from 'swiper/modules';
 
 Swiper.use([A11y, Navigation]);
 
+const buttons = document.querySelectorAll('.documents__name')
+
 if (document.querySelector('.documents__swiper')) {
-    new Swiper('.documents__swiper', {
-        loop: true,
+    const documentsSlider = new Swiper('.documents__swiper', {
+       loop: true,
         speed: 800,
-        slidesPerGroup: 1,
         slidesPerView: 3,
         spaceBetween: 20,
 
@@ -18,8 +19,8 @@ if (document.querySelector('.documents__swiper')) {
 
         breakpoints: {
             768: {
-                slidesPerView: 3, 
-                spaceBetween: 20,
+                slidesPerView: 3,
+                spaceBetween: 20, 
             },
 
             560: {
@@ -27,10 +28,27 @@ if (document.querySelector('.documents__swiper')) {
             },
 
             0: {
-                slidesPerGroup: 1,
                 slidesPerView: 1,
                 spaceBetween: 10,
             }
         },
     });
+    
+    if (buttons) {
+        documentsSlider.on('activeIndexChange', function(swiper){
+            buttons.forEach((button, index) => {
+                if (index === swiper.realIndex) {
+                    button.classList.add('documents__name--active')
+                } else {
+                    button.classList.remove('documents__name--active')
+                }
+            })
+        })
+
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                documentsSlider.slideToLoop(index)
+            })
+        })
+    }
 }
