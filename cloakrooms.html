@@ -81,7 +81,7 @@
                         </a>
                     </li>
                 </ul>
-                <button class="button" type="button">Заказать звонок</button>
+                <button class="button" data-graph-path="modal-form" aria-controls="modal-form" type="button">Заказать звонок</button>
             </div>
             <button class="burger-button" aria-controls="header-burger-menu" aria-label="Открыть меню" aria-expanded="false" data-burger-button>
                 <span class="burger-button__line" aria-hidden></span>
@@ -89,30 +89,52 @@
         </nav>
     </div>
 </header>
-
-<!-- <div class="graph-modal">
-    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="">
-    <div class="graph-modal__box">
-        <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
-    </div>
-</div>
-    <div class="graph-modal__container graph-modal__container--thank" role="dialog" aria-modal="true" data-graph-target="modal-thank">
-    <div class="graph-modal__box">
-        <div class="graph-modal__header">
-            <span class="graph-modal__title title">
-                Спасибо за обратную связь!
-            </span>
+<div class="graph-modal">
+    <div class="graph-modal__container" role="dialog" aria-modal="true" id="modal-form" data-graph-target="modal-form">
+        <div class="graph-modal__box">
             <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+            <form class="graph-modal__form form">
+                <div class="form__header">
+                    <span class="form__title">
+                        1 М<sup>2</sup> от 29 700 ₽
+                    </span>
+                    <p class="form__text">
+                        Оставьте свои контактные данные и получите проект в 
+                        <span class="form__accent">подарок</span>
+                    </p>
+                </div>
+                <div class="form__body">
+                    <div class="form__item">
+                        <label class="sr-only" for="modal-name-id">
+                            Введите ваше имя
+                        </label>
+                        <input class="form__field" id="modal-name-id" name="name" type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="sr-only" for="modal-phone-id">
+                            Введите ваш номер телефона
+                        </label>
+                        <input class="form__field" id="modal-phone-id" name="phone" type="tel" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="sr-only" for="modal-email-id">
+                            Введите вашу электронную почту
+                        </label>
+                        <input class="form__field" id="modal-email-id" name="email" type="email" placeholder="Ваш email" required>
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <button class="form__button button" type="button">
+                        Отправить
+                    </button>
+                    <p class="form__subtext">
+                        Нажимая на кнопку, вы даёте согласие на обработку персональных данных и соглашаетесь c <a href="#">политикой конфиденциальности</a>
+                    </p>
+                </div>
+            </form>
         </div>
-        <div class="graph-modal__text">
-            <p>
-                    В ближайшее время обработаем данные и опубликуем пост
-                </p>
-        </div>
-        <button class="graph-modal__button button js-modal-close" type="button">Отлично!</button>
     </div>
 </div>
-</div> -->
 
 <div class="main">
     <section class="hero @class" style="background-image: url('img/blocks/hero/14.jpg');">
@@ -661,6 +683,7 @@
                             </label>
                             <input class="form__field" id="promo-email" name="email" type="email" placeholder="Ваш email" required>
                         </div>
+                        
                     </div>
                     <button class="form__button button button--light" type="button">
                         Отправить
