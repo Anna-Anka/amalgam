@@ -1,0 +1,15 @@
+.all-news {
+	background-color: var(--color-blue-50);
+
+	&__items {
+		@include grid(repeat(auto-fill, minmax(280px, 1fr)));
+
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+	}
+}
