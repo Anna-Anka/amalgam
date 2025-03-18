@@ -1,5 +1,5 @@
 .plans {
 	&__items {
-		@include grid(repeat(auto-fit, minmax(280px, 1fr)));
+		@include grid(repeat(auto-fill, minmax(280px, 1fr)));
 	}
 }

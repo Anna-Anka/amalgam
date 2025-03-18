@@ -1,6 +1,6 @@
 .modular-directions {
 	&__items {
-		@include grid(repeat(auto-fit, minmax(315px, 1fr)));
+		@include grid(repeat(auto-fill, minmax(315px, 1fr)));
 	}
 
 	.direction-card {

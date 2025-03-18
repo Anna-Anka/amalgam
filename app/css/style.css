@@ -4621,7 +4621,7 @@ body {
 .plans__items {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
 
@@ -4667,7 +4667,7 @@ body {
 .modular-directions__items {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
   gap: 30px;
 }
 
@@ -6187,7 +6187,7 @@ body {
 .projects-page .realized-projects__items {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 30px;
 }
 
@@ -6323,7 +6323,7 @@ body {
 .our-team__items {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
 
