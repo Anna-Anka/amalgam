@@ -5613,6 +5613,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider_brands_slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./slider/_brands-slider.js */ "./src/js/project/slider/_brands-slider.js");
 /* harmony import */ var _slider_image_slider_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./slider/_image-slider.js */ "./src/js/project/slider/_image-slider.js");
 /* harmony import */ var _slider_planning_slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./slider/_planning-slider.js */ "./src/js/project/slider/_planning-slider.js");
+/* harmony import */ var _slider_other_news_slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./slider/_other-news-slider.js */ "./src/js/project/slider/_other-news-slider.js");
+
 
 
 
@@ -5771,6 +5773,53 @@ if (document.querySelector('.image-slider__swiper')) {
     navigation: {
       nextEl: '.image-slider__button--next',
       prevEl: '.image-slider__button--prev'
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/project/slider/_other-news-slider.js":
+/*!*****************************************************!*\
+  !*** ./src/js/project/slider/_other-news-slider.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.A11y, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+if (document.querySelector('.other-news__swiper')) {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.other-news__swiper', {
+    speed: 800,
+    spaceBetween: 30,
+    slidesPerGroup: 4,
+    slidesPerView: 4,
+    navigation: {
+      nextEl: '.other-news__button--next',
+      prevEl: '.other-news__button--prev'
+    },
+    breakpoints: {
+      1200: {
+        slidesPerGroup: 4,
+        slidesPerView: 4,
+        spaceBetween: 30
+      },
+      992: {
+        slidesPerGroup: 3,
+        slidesPerView: 3
+      },
+      560: {
+        slidesPerGroup: 2,
+        slidesPerView: 2
+      },
+      0: {
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        spaceBetween: 20
+      }
     }
   });
 }
