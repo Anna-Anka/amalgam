@@ -16,6 +16,10 @@ body {
 	padding: 0 15px;
 	width: 100%;
 	max-width: 1368px;
+
+	&--small {
+		max-width: 900px;
+	}
 }
 
 .wrapper {
