@@ -25,9 +25,117 @@
             <div class="burger-menu" id="header-burger-menu" data-menu>
                 <ul class="burger-menu__items">
                     <li class="burger-menu__item">
-                        <a href="#" data-menu-link>
+                        <!-- 
+                        Для кнопки, которая открывает меню первого уровня:
+                        1) добавлять класс "burger-menu__button" и модификатор "burger-menu__button--main"
+                        2) добавить aria-label="Открыть дополнительное меню" и aria-expanded="false". значение этих атрибутов будет меняться в js
+                          -->
+                        <button class="burger-menu__button burger-menu__button--main" type="button" aria-label="Открыть дополнительное меню" aria-expanded="false">
                             Продукты
-                        </a>
+                        </button>
+                        <!-- Меню, которое открывается по клику, должно идти сразу за кнопкой и иметь класс "burger-menu__submenu" -->
+                        <div class="burger-menu__submenu">
+                            <div class="burger-menu__subitem">
+                                <a href="#" data-menu-link>
+                                    Вахтовые поселки
+                                </a>
+                            </div>
+                            <div class="burger-menu__subitem" data-burger-submenu-container>
+                                <!-- Кнопка / ссылка, которая управляет меню второго уровня и само меню должны находиться в родителе с атрибутом "data-burger-submenu-container" -->
+                                <div class="burger-menu__manage">
+                                    <!-- Если мы находимся на touch устройстве, то меню будет открываться по клику на кнопку с классом "burger-menu__arrow", а если нет, то при hover на ссылку с классом "burger-menu__button" -->
+                                    <a class="burger-menu__button" href="#" data-menu-link>
+                                        Модульные здания
+                                    </a>
+                                    <button class="burger-menu__arrow" type="button">
+                                        <svg aria-hidden>
+                                            <use xlink:href="img/sprite.svg#chevron">
+                                        </svg>
+                                    </button>
+                                </div>
+                                <ul class="burger-menu__submenu burger-menu__submenu--right">
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Модульные общежития
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Модульные АБК
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Модульные офисы
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Модульные столовые
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Модульные гостиницы
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Другие модульные здания
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="burger-menu__subitem" data-burger-submenu-container>
+                                <div class="burger-menu__manage">
+                                    <a class="burger-menu__button" href="#" data-menu-link>
+                                        Отдельностоящие модули
+                                    </a>
+                                    <button class="burger-menu__arrow" type="button">
+                                        <svg aria-hidden>
+                                            <use xlink:href="img/sprite.svg#chevron">
+                                        </svg>
+                                    </button>
+                                </div>
+                                <ul class="burger-menu__submenu burger-menu__submenu--right" id="header-burger-submenu-3">
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Жилые
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Офисы
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            КПП
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Санитарные
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Раздевалки и пункты обогрева
+                                        </a>
+                                    </li>
+                                    <li class="burger-menu__subitem">
+                                        <a href="#" data-menu-link>
+                                            Специализированные
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="burger-menu__subitem">
+                                <a href="#" data-menu-link>
+                                    Каркасные здания
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li class="burger-menu__item">
                         <a href="#" data-menu-link>
