@@ -5599,6 +5599,115 @@ _fancyapps_ui__WEBPACK_IMPORTED_MODULE_3__.Fancybox.bind();
 
 /***/ }),
 
+/***/ "./src/js/project/_animation-frame-buildings-images.js":
+/*!*************************************************************!*\
+  !*** ./src/js/project/_animation-frame-buildings-images.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+(function () {
+  var images = document.querySelectorAll('.frame-features .block-info__image');
+  if (!images) {
+    return null;
+  }
+  var removeClass = function removeClass() {
+    images.forEach(function (image) {
+      image.classList.remove('block-info__image--large');
+    });
+  };
+  images.forEach(function (image) {
+    image.addEventListener('mouseover', function () {
+      removeClass();
+      image.classList.add('block-info__image--large');
+    });
+  });
+})();
+
+/***/ }),
+
+/***/ "./src/js/project/_burger-submenu.js":
+/*!*******************************************!*\
+  !*** ./src/js/project/_burger-submenu.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+var changeState = function changeState(submenu, button) {
+  if (submenu.classList.contains('burger-menu__submenu--active')) {
+    button.setAttribute('aria-expanded', false);
+    button.setAttribute('aria-label', 'Открыть дополнительное меню');
+    submenu.classList.remove('burger-menu__submenu--active');
+    button.classList.remove('burger-menu__button--open');
+  } else {
+    button.setAttribute('aria-expanded', true);
+    button.setAttribute('aria-label', 'Закрыть дополнительное меню');
+    submenu.classList.add('burger-menu__submenu--active');
+    button.classList.add('burger-menu__button--open');
+  }
+};
+(function () {
+  var mainButtons = document.querySelectorAll('.burger-menu__button--main');
+  var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  var submenuContainers = document.querySelectorAll('[data-burger-submenu-container]');
+  if (!mainButtons) {
+    return;
+  }
+  mainButtons.forEach(function (mainButton, index) {
+    var menu = mainButton.nextElementSibling;
+    var id = "header-burger-submenu-main-".concat(index);
+    mainButton.setAttribute('aria-controls', id);
+    menu.setAttribute('id', id);
+    mainButton.addEventListener('click', function () {
+      changeState(menu, mainButton);
+    });
+    document.addEventListener('click', function (event) {
+      if (!mainButton.contains(event.target) && !menu.contains(event.target)) {
+        changeState(menu, mainButton);
+      }
+    });
+  });
+  if (!submenuContainers) {
+    return;
+  }
+  submenuContainers.forEach(function (container, index) {
+    var button = container.querySelector('.burger-menu__button');
+    var arrow = container.querySelector('.burger-menu__arrow');
+    var submenu = container.querySelector('.burger-menu__submenu');
+    var id = "header-burger-submenu-".concat(index);
+    submenu.setAttribute('id', id);
+    if (isTouchDevice) {
+      // Если телефон
+      button.removeAttribute('aria-controls');
+      button.removeAttribute('aria-label');
+      button.removeAttribute('aria-expanded');
+      arrow.removeAttribute('aria-hidden');
+      arrow.setAttribute('aria-controls', id);
+      arrow.setAttribute('aria-label', 'Открыть дополнительное меню');
+      arrow.setAttribute('aria-expanded', false);
+      arrow.addEventListener('click', function () {
+        changeState(submenu, arrow);
+      });
+    } else {
+      arrow.removeAttribute('aria-controls');
+      arrow.removeAttribute('aria-label');
+      arrow.removeAttribute('aria-expanded');
+      arrow.setAttribute('aria-hidden', true);
+      button.setAttribute('aria-controls', id);
+      button.setAttribute('aria-label', 'Открыть дополнительное меню');
+      button.setAttribute('aria-expanded', false);
+      container.addEventListener('mouseover', function () {
+        changeState(submenu, button);
+      });
+      container.addEventListener('mouseout', function () {
+        changeState(submenu, button);
+      });
+    }
+  });
+})();
+
+/***/ }),
+
 /***/ "./src/js/project/index.js":
 /*!*********************************!*\
   !*** ./src/js/project/index.js ***!
@@ -5613,6 +5722,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider_brands_slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./slider/_brands-slider.js */ "./src/js/project/slider/_brands-slider.js");
 /* harmony import */ var _slider_image_slider_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./slider/_image-slider.js */ "./src/js/project/slider/_image-slider.js");
 /* harmony import */ var _slider_planning_slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./slider/_planning-slider.js */ "./src/js/project/slider/_planning-slider.js");
+/* harmony import */ var _slider_other_news_slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./slider/_other-news-slider.js */ "./src/js/project/slider/_other-news-slider.js");
+/* harmony import */ var _burger_submenu_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_burger-submenu.js */ "./src/js/project/_burger-submenu.js");
+/* harmony import */ var _animation_frame_buildings_images_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./_animation-frame-buildings-images.js */ "./src/js/project/_animation-frame-buildings-images.js");
+
+
+
 
 
 
@@ -5771,6 +5886,53 @@ if (document.querySelector('.image-slider__swiper')) {
     navigation: {
       nextEl: '.image-slider__button--next',
       prevEl: '.image-slider__button--prev'
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/project/slider/_other-news-slider.js":
+/*!*****************************************************!*\
+  !*** ./src/js/project/slider/_other-news-slider.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.A11y, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+if (document.querySelector('.other-news__swiper')) {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.other-news__swiper', {
+    speed: 800,
+    spaceBetween: 30,
+    slidesPerGroup: 4,
+    slidesPerView: 4,
+    navigation: {
+      nextEl: '.other-news__button--next',
+      prevEl: '.other-news__button--prev'
+    },
+    breakpoints: {
+      1200: {
+        slidesPerGroup: 4,
+        slidesPerView: 4,
+        spaceBetween: 30
+      },
+      992: {
+        slidesPerGroup: 3,
+        slidesPerView: 3
+      },
+      560: {
+        slidesPerGroup: 2,
+        slidesPerView: 2
+      },
+      0: {
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        spaceBetween: 20
+      }
     }
   });
 }
@@ -6489,7 +6651,6 @@ __webpack_require__.r(__webpack_exports__);
 
 // import { fixFullheight } from './_fix-fullheight.js';
 // import { getHeaderHeight } from './_get-header-height.js';
-// import { mobileCheck } from './_mobile-check.js';
 
 // fixFullheight();
 // getHeaderHeight();
