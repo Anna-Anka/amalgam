@@ -3254,6 +3254,10 @@ body {
   padding: 70px 0;
 }
 
+.section--not-pt {
+  padding-top: 0;
+}
+
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7822,6 +7826,10 @@ body {
 
   .section {
     padding: 50px 0;
+  }
+
+  .section--not-pt {
+    padding-top: 0;
   }
 
   .button {

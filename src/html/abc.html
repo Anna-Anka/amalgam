@@ -43,7 +43,9 @@
     @include('./components/blocks/_realized-projects.html')
     @include('./components/blocks/_produced.html')
 
-    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_reviews.html', {
+    'class': 'section--not-pt'
+    })
     @include('./components/blocks/_brands.html')
     @include('./components/blocks/_questions.html')
 </div>
