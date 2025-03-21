@@ -1,0 +1,35 @@
+.frame-features {
+	.block-info {
+		&__images {
+			@include flex-simple;
+
+			@include mq(md, min) {
+				position: static;
+				padding-bottom: 0;
+			}
+
+			@include mq(md) {
+				@include grid(repeat(2, 1fr), 20px);
+			}
+		}
+
+		&__image {
+			@include resize-picture(31%);
+
+			flex-basis: 260px;
+			border-radius: 8px;
+			width: 100%;
+			transition: flex-basis 0.3s;
+
+			@include mq(md) {
+				padding-bottom: 90%;
+			}
+
+			&--large {
+				@include mq(xl, min) {
+					flex-basis: 460px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+@include('./settings/_head.html', {
+'title' : 'Амальгама | Каркасные здания',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+@include('./components/blocks/modals/_modal.html')
+
+<div class="main">
+    @include('./components/blocks/_hero.html', {
+    'tag': 'section',
+    'bg': '17',
+    'title': 'каркасные здания в новосибирске',
+    'titleTag': 'h1',
+    'list': ['Дешевле капитального строительства', 'Экономия на фундаменте', 'Изготовление от 15 дней'],
+    'name-id': 'hero-name',
+    'phone-id': 'hero-phone',
+    'email-id': 'hero-email'
+    })
+
+    @include('./components/blocks/_modular-directions.html')
+
+    @include('./pages/frame-buildings-page/_frame-buildings-features.html')
+
+    @include('./pages/frame-buildings-page/_frame-buildings-advantages.html')
+
+    @include('./components/blocks/_promo.html', {
+    'name-id': 'promo-name',
+    'phone-id': 'promo-phone',
+    'email-id': 'promo-email'
+    })
+
+    @include('./components/blocks/_reviews.html')
+    @include('./components/blocks/_brands.html')
+    @include('./components/blocks/_questions.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
