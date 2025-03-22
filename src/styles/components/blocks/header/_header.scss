@@ -43,6 +43,9 @@
 
 		a {
 			@include link;
+
+			outline: 0;
+			border-radius: 2px;
 		}
 	}
 
