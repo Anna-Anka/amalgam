@@ -5633,17 +5633,49 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-var changeState = function changeState(submenu, button) {
-  if (submenu.classList.contains('burger-menu__submenu--active')) {
-    button.setAttribute('aria-expanded', false);
-    button.setAttribute('aria-label', 'Открыть дополнительное меню');
-    submenu.classList.remove('burger-menu__submenu--active');
-    button.classList.remove('burger-menu__button--open');
+/* harmony import */ var _utils_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/index.js */ "./src/js/utils/index.js");
+
+var allMainSubmenu = [];
+var allSubmenu = {};
+var focusCatch = function focusCatch(e) {
+  allMainSubmenu.forEach(function (menu) {
+    var nodes = menu.querySelectorAll(_utils_index_js__WEBPACK_IMPORTED_MODULE_0__.globalVars.focusEl);
+    var nodesArray = Array.prototype.slice.call(nodes);
+    var focusedItemIndex = nodesArray.indexOf(document.activeElement);
+    if (e.shiftKey && focusedItemIndex === 0) {
+      nodesArray[nodesArray.length - 1].focus();
+      e.preventDefault();
+    }
+    if (!e.shiftKey && focusedItemIndex === nodesArray.length - 1) {
+      nodesArray[0].focus();
+      e.preventDefault();
+    }
+  });
+};
+var closeMenu = function closeMenu(menu, button) {
+  button.setAttribute('aria-expanded', false);
+  button.setAttribute('aria-label', 'Открыть дополнительное меню');
+  menu.classList.remove('burger-menu__submenu--active');
+  button.classList.remove('burger-menu__button--open');
+};
+var openMenu = function openMenu(menu, button) {
+  button.setAttribute('aria-expanded', true);
+  button.setAttribute('aria-label', 'Закрыть дополнительное меню');
+  menu.classList.add('burger-menu__submenu--active');
+  button.classList.add('burger-menu__button--open');
+};
+var closeAllSubmenu = function closeAllSubmenu() {
+  for (var key in allSubmenu) {
+    var menu = allSubmenu[key].menu;
+    var button = allSubmenu[key].button;
+    closeMenu(menu, button);
+  }
+};
+var changeState = function changeState(menu, button) {
+  if (menu.classList.contains('burger-menu__submenu--active')) {
+    closeMenu(menu, button);
   } else {
-    button.setAttribute('aria-expanded', true);
-    button.setAttribute('aria-label', 'Закрыть дополнительное меню');
-    submenu.classList.add('burger-menu__submenu--active');
-    button.classList.add('burger-menu__button--open');
+    openMenu(menu, button);
   }
 };
 (function () {
@@ -5658,12 +5690,28 @@ var changeState = function changeState(submenu, button) {
     var id = "header-burger-submenu-main-".concat(index);
     mainButton.setAttribute('aria-controls', id);
     menu.setAttribute('id', id);
+    allMainSubmenu.push(menu);
     mainButton.addEventListener('click', function () {
       changeState(menu, mainButton);
     });
     document.addEventListener('click', function (event) {
-      if (!mainButton.contains(event.target) && !menu.contains(event.target)) {
-        changeState(menu, mainButton);
+      var target = event.target;
+      if (menu.classList.contains('burger-menu__submenu--active')) {
+        if (!mainButton.contains(target) && !menu.contains(target)) {
+          closeMenu(menu, mainButton);
+          closeAllSubmenu();
+        }
+      }
+    });
+    document.addEventListener('keydown', function (event) {
+      if (menu.classList.contains('burger-menu__submenu--active')) {
+        if (event.key === 'Escape') {
+          closeMenu(menu, mainButton);
+          closeAllSubmenu();
+        }
+        if (event.which) {
+          focusCatch(event);
+        }
       }
     });
   });
@@ -5676,6 +5724,12 @@ var changeState = function changeState(submenu, button) {
     var submenu = container.querySelector('.burger-menu__submenu');
     var id = "header-burger-submenu-".concat(index);
     submenu.setAttribute('id', id);
+    allSubmenu[index] = {
+      parent: container,
+      button: button,
+      arrow: arrow,
+      menu: submenu
+    };
     if (isTouchDevice) {
       // Если телефон
       button.removeAttribute('aria-controls');
@@ -5697,10 +5751,20 @@ var changeState = function changeState(submenu, button) {
       button.setAttribute('aria-label', 'Открыть дополнительное меню');
       button.setAttribute('aria-expanded', false);
       container.addEventListener('mouseover', function () {
-        changeState(submenu, button);
+        openMenu(submenu, button);
+      });
+      button.addEventListener('keydown', function (event) {
+        var target = event.target;
+        var targetMenu = target.closest('[data-burger-submenu-container]').querySelector('.burger-menu__submenu');
+        if (event.key === 'Enter') {
+          closeAllSubmenu();
+          if (button.contains(target)) {
+            openMenu(targetMenu, target);
+          }
+        }
       });
       container.addEventListener('mouseout', function () {
-        changeState(submenu, button);
+        closeMenu(submenu, button);
       });
     }
   });
