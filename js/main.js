@@ -5813,7 +5813,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.A11y, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.A11y, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay]);
 if (document.querySelector('.brands__swiper')) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.brands__swiper', {
     loop: true,
@@ -5821,6 +5821,11 @@ if (document.querySelector('.brands__swiper')) {
     slidesPerGroup: 2,
     slidesPerView: 'auto',
     spaceBetween: 30,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      stopOnlastSlide: false
+    },
     navigation: {
       nextEl: '.brands__button--next',
       prevEl: '.brands__button--prev'
@@ -5906,7 +5911,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.A11y, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper_modules__WEBPACK_IMPORTED_MODULE_1__.A11y, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
 if (document.querySelector('.home-hero__swiper')) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.home-hero__swiper', {
     loop: true,
@@ -5914,11 +5919,6 @@ if (document.querySelector('.home-hero__swiper')) {
     slidesPerGroup: 1,
     slidesPerView: 1,
     allowTouchMove: false,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-      stopOnlastSlide: false
-    },
     navigation: {
       nextEl: '.home-hero__button--next',
       prevEl: '.home-hero__button--prev'
