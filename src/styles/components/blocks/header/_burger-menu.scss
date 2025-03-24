@@ -151,7 +151,7 @@
 			@include mq(xl, min) {
 				left: unset;
 				right: 0;
-				top: 0;
+				top: -10px;
 				bottom: unset;
 				transform: translateX(100%);
 			}
@@ -160,6 +160,7 @@
 
 	&__subitem {
 		@include mq(xl, min) {
+			position: relative;
 			padding: 0 16px;
 		}
 
@@ -176,7 +177,6 @@
 	a {
 		@include link;
 
-		outline: 0;
 		border-radius: 2px;
 		width: 100%;
 	}

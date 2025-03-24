@@ -3525,11 +3525,11 @@ body {
 }
 
 .header__list a {
+  outline: 0;
   -webkit-transition: color 0.3s, -webkit-box-shadow 0.3s;
   transition: color 0.3s, -webkit-box-shadow 0.3s;
   transition: color 0.3s, box-shadow 0.3s;
   transition: color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  outline: 0;
   border-radius: 2px;
 }
 
@@ -3740,11 +3740,11 @@ body {
 
 .burger-menu__button,
 .burger-menu a {
+  outline: 0;
   -webkit-transition: color 0.3s, -webkit-box-shadow 0.3s;
   transition: color 0.3s, -webkit-box-shadow 0.3s;
   transition: color 0.3s, box-shadow 0.3s;
   transition: color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  outline: 0;
   border-radius: 2px;
   width: 100%;
 }
@@ -3776,6 +3776,9 @@ body {
 }
 
 .socials__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 4px;
   width: 100%;
   height: 100%;
@@ -3858,6 +3861,10 @@ body {
 
 .hero__item:not(:last-child) {
   margin-bottom: 8px;
+}
+
+.hero .form__field {
+  color: var(--color-blue-300);
 }
 
 .form {
@@ -4853,14 +4860,18 @@ body {
   gap: 4px;
 }
 
-.footer__link {
+.footer__link,
+.footer__head {
+  outline: 0;
   -webkit-transition: color 0.3s, -webkit-box-shadow 0.3s;
   transition: color 0.3s, -webkit-box-shadow 0.3s;
   transition: color 0.3s, box-shadow 0.3s;
   transition: color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  border-radius: 2px;
 }
 
-.footer__link:focus-visible {
+.footer__link:focus-visible,
+.footer__head:focus-visible {
   -webkit-box-shadow: 0 0 0 1px var(--color-orange-500);
   box-shadow: 0 0 0 1px var(--color-orange-500);
 }
@@ -6988,7 +6999,7 @@ body {
 }
 
 @media only screen and (min-width: 560px) {
-  .hero__form {
+  .hero .form {
     max-width: 345px;
   }
 
@@ -7270,7 +7281,7 @@ body {
   .burger-menu__submenu--right {
     left: unset;
     right: 0;
-    top: 0;
+    top: -10px;
     bottom: unset;
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
@@ -7278,6 +7289,7 @@ body {
   }
 
   .burger-menu__subitem {
+    position: relative;
     padding: 0 16px;
   }
 
@@ -8306,8 +8318,8 @@ body {
   }
 
   .planning-block__buttons {
-    right: unset;
     left: 16px;
+    right: unset;
   }
 
   .project-nav__wrapper {
@@ -8451,7 +8463,8 @@ body {
     border-color: var(--color-orange-200);
   }
 
-  .footer__link:hover {
+  .footer__link:hover,
+  .footer__head:hover {
     color: var(--color-orange-500);
   }
 

@@ -60,8 +60,11 @@
 		gap: 4px;
 	}
 
-	&__link {
+	&__link,
+	&__head {
 		@include link;
+
+		border-radius: 2px;
 	}
 
 	&__head,

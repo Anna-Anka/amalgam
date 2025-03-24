@@ -93,7 +93,11 @@
 		}
 	}
 
-	&__form {
+	.form {
+		&__field {
+			color: var(--color-blue-300);
+		}
+
 		@include mq(sm, min) {
 			max-width: 345px;
 		}

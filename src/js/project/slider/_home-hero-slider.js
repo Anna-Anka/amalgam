@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
-import { A11y, Navigation, Autoplay } from 'swiper/modules';
+import { A11y, Navigation} from 'swiper/modules';
 
-Swiper.use([A11y, Navigation, Autoplay]);
+Swiper.use([A11y, Navigation]);
 
 if (document.querySelector('.home-hero__swiper')) {
     new Swiper('.home-hero__swiper', {
@@ -10,12 +10,6 @@ if (document.querySelector('.home-hero__swiper')) {
         slidesPerGroup: 1,
         slidesPerView: 1,
         allowTouchMove: false,        
-
-        autoplay: {
-            delay: 10000,
-            disableOnInteraction: false,
-            stopOnlastSlide: false,
-        },
 
         navigation: {
             nextEl: '.home-hero__button--next',

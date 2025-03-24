@@ -72,8 +72,8 @@
 		bottom: 16px;
 
 		@include mq(sm) {
-			right: unset;
 			left: 16px;
+			right: unset;
 		}
 	}
 
