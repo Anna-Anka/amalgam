@@ -33,7 +33,9 @@
 		width: 100%;
 
 		@include mq(lg, min) {
+			overflow-y: auto;
 			max-width: 632px;
+			max-height: 248px;
 		}
 	}
 

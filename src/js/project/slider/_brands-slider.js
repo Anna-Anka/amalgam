@@ -5,11 +5,10 @@ Swiper.use([A11y, Navigation, Autoplay]);
 
 if (document.querySelector('.brands__swiper')) {
     new Swiper('.brands__swiper', {
-        loop: true,
         speed: 800,
         slidesPerGroup: 2,
-        slidesPerView: 'auto',
         spaceBetween: 30,
+        slidesPerView: 'auto',
 
         autoplay: {
             delay: 3000,
