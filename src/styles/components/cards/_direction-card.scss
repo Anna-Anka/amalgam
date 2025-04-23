@@ -91,6 +91,8 @@
 	}
 
 	&__link {
+		@include link-cover;
+
 		margin-top: auto;
 
 		@include mq(sm, min) {
