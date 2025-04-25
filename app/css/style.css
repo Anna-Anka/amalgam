@@ -6244,10 +6244,6 @@ body {
   background-color: var(--color-orange-500);
 }
 
-.about-demo__title {
-  width: 100%;
-}
-
 .about-demo__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7229,10 +7225,6 @@ body {
 
   .federal-projects__content {
     max-width: 540px;
-  }
-
-  .about-demo__title {
-    max-width: 882px;
   }
 
   .rental-characteristics__info {

@@ -1,12 +1,4 @@
 .about-demo {
-	&__title {
-		width: 100%;
-
-		@include mq(lg, min) {
-			max-width: 882px;
-		}
-	}
-
 	&__wrapper {
 		@include flex-simple;
 
