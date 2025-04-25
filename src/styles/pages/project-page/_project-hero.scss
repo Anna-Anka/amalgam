@@ -66,11 +66,26 @@
 		}
 	}
 
-	.characteristics {
-		@include grid(repeat(auto-fit, minmax(428px, 1fr)), 0 30px);
+	&__info {
+		display: flex;
+		gap: 30px;
 
-		@include mq(md) {
-			grid-template-columns: 1fr;
+		@include mq(lg) {
+			flex-direction: column;
+		}
+	}
+
+	.characteristics {
+		flex-grow: 1;
+
+		@include mq(lg, min) {
+			width: 40%;
+		}
+	}
+
+	.planning-slider {
+		@include mq(lg, min) {
+			width: 66%;
 		}
 	}
 }

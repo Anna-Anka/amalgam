@@ -1,0 +1,66 @@
+.planning-slider {
+	@include flex-simple(12px, column);
+
+	position: relative;
+	border: 1px solid var(--color-blue-70);
+	border-radius: 12px;
+	padding: 16px 16px 14px;
+
+	@include mq(sm) {
+		padding-bottom: 74px;
+	}
+
+	&__swiper {
+		position: static;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__image {
+		@include resize-picture(26%);
+
+		display: flex;
+		margin-bottom: 32px;
+		width: 100%;
+		transition: transform 0.3s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(0.95);
+			}
+		}
+
+		img {
+			object-fit: contain;
+		}
+	}
+
+	&__subtitle {
+		@include mq(sm, min) {
+			padding-right: 120px;
+		}
+	}
+
+	&__buttons {
+		@include swiper-buttons;
+
+		position: absolute;
+		right: 16px;
+		bottom: 16px;
+
+		@include mq(sm) {
+			left: 16px;
+			right: unset;
+		}
+	}
+
+	&__button {
+		background-color: var(--color-blue-50);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-blue-70);
+			}
+		}
+	}
+}
