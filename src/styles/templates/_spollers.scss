@@ -40,6 +40,8 @@
 			height: 24px;
 			color: var(--color-grey-200);
 			background-image: url('../img/sprite.svg#chevron');
+			filter: invert(62%) sepia(1%) saturate(436%) hue-rotate(184deg)
+				brightness(90%) contrast(93%);
 			transform: translateY(-50%);
 			transition: transform 0.5s ease 0s;
 		}
