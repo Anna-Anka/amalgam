@@ -13,9 +13,14 @@
 	}
 
 	&__wrapper {
-		@include grid(1fr 1fr);
+		@include grid(repeat(4, 1fr));
 
+		justify-content: space-between;
 		gap: 12px 30px;
+
+		@include mq(lg) {
+			grid-template-columns: 1fr 1fr;
+		}
 
 		@include mq(sm) {
 			grid-template-columns: 1fr;
@@ -23,41 +28,17 @@
 		}
 	}
 
-	&__menu {
-		@include grid(1fr 1fr, 12px 30px);
+	&__column {
+		@include flex-simple(16px, column);
 
-		align-self: flex-start;
-		font-size: 14px;
-	}
-
-	&__list {
-		@include grid(1fr 1fr);
-	}
-
-	&__menu,
-	&__list {
-		@include mq(lg) {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	&__items,
-	&__item {
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__items {
-		flex-basis: 25%;
-		gap: 16px;
-
-		@include mq(lg) {
-			flex-basis: calc(50% - 15px);
+		&--menu {
+			font-size: 14px;
+			gap: 12px;
 		}
 	}
 
 	&__item {
-		gap: 4px;
+		@include flex-simple(4px, column);
 	}
 
 	&__link,
