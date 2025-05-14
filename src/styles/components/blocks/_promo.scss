@@ -50,10 +50,23 @@
 			flex-basis: 75%;
 			gap: 16px;
 
+			&--large {
+				flex-basis: 80%;
+
+				@include mq(md) {
+					flex-basis: 100%;
+					flex-direction: column;
+				}
+			}
+
 			@include mq(sm) {
 				flex-basis: 100%;
 				flex-direction: column;
 			}
+		}
+
+		.form__items--large + .form__button {
+			flex-basis: 20%;
 		}
 
 		&__field {
