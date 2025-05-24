@@ -10,6 +10,12 @@
 
 		border-radius: 16px;
 
+		&--contain {
+			img {
+				object-fit: contain;
+			}
+		}
+
 		@include mq(lg) {
 			border-radius: 8px;
 		}

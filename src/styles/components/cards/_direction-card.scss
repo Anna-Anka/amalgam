@@ -25,9 +25,7 @@
 	}
 
 	&__header {
-		@include flex-alignment(20px, space-between, flex-start);
-
-		flex-wrap: wrap;
+		@include flex-alignment(12px, space-between, flex-start, column);
 
 		.direction-card {
 			&__title {

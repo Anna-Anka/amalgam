@@ -7,6 +7,9 @@
 
 @include('./components/blocks/_header.html')
 @include('./components/blocks/modals/_modal.html')
+@include('./components/blocks/_breadcrumbs.html', {
+'links': ['Главная', 'Модульные здания', 'Модульные АБК']
+})
 
 <div class="main">
     @include('./components/blocks/_hero.html', {
