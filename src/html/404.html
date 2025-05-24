@@ -1,0 +1,16 @@
+@include('./settings/_head.html', {
+'title' : '404 страница',
+'description' : 'Амальгама — ваш надежный партнер в строительстве быстровозводимых зданий. Высокое качество, быстрые сроки, индивидуальный подход. Закажите проект уже сегодня!',
+'keywords' : 'быстровозводимые здания, быстровозводимые конструкции, быстровозводимые сооружения, строительство под ключ, модульные здания,',
+'robots' : 'noindex, nofollow',
+})
+
+@include('./components/blocks/_header.html')
+@include('./components/blocks/modals/_modal.html')
+
+<div class="main">
+    @include('./pages/404-page/_404.html')
+</div>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
