@@ -1,4 +1,26 @@
 .our-contacts {
+	&__header {
+		@include flex-alignment(40px, space-between);
+
+		margin-bottom: 32px;
+
+		@include mq(lg) {
+			margin-bottom: 24px;
+		}
+
+		@include mq(sm) {
+			@include flex-alignment(12px, flex-start, flex-start, column);
+		}
+	}
+
+	&__title {
+		margin-bottom: 0;
+
+		@include mq(lg) {
+			margin-bottom: 0;
+		}
+	}
+
 	&__wrapper {
 		@include flex-simple;
 
