@@ -100,6 +100,13 @@
 
 		margin-top: auto;
 
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-white);
+				background-color: var(--color-orange-500);
+			}
+		}
+
 		@include mq(sm, min) {
 			width: fit-content;
 		}
