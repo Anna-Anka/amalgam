@@ -45,15 +45,24 @@
                         </label>
                         <input class="form__field" id="@email-id" name="email" type="email" placeholder="Ваш email" required>
                     </div>
+                    <label class="form__item form__item--checkbox">
+                        <input class="form__hidden" type="checkbox" name="police" value="true" required>
+                        <span class="form__visible" aria-hidden="true"></span>
+                        <span>
+                            Я подтверждаю ознакомление <a href="https://a-gama.ru/privacy-policy/" target="_blank">с Политикой конфиденциальности</a> и даю согласие на обработку персональных данных
+                        </span>
+                    </label>
+                    <label class="form__item form__item--checkbox">
+                        <input class="form__hidden" type="checkbox" name="advertising" value="true" required>
+                        <span class="form__visible" aria-hidden="true"></span>
+                        <span>
+                            Я даю согласие на получение <a href="https://a-gama.pro/soglasie" target="_blank">информационных и рекламных материалов</a>
+                        </span>
+                    </label>
                 </div>
-                <div class="form__footer">
-                    <button class="form__button button" type="button">
-                        Отправить
-                    </button>
-                    <p class="form__subtext">
-                        Нажимая на кнопку, вы даёте согласие на обработку персональных данных и соглашаетесь c <a href="#">политикой конфиденциальности</a>
-                    </p>
-                </div>
+                <button class="form__button button" type="submit">
+                    Отправить
+                </button>
             </form>
         </div>
     </div>
