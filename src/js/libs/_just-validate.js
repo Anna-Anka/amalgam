@@ -16,20 +16,43 @@ import JustValidate from "just-validate";
                 const allEmailFields = form.querySelectorAll('input[type="email"]')
 
                 allEmailFields.forEach((item) => {
-                    const errorElement = item.nextElementSibling
-
                     validation.addField(item, [
                         {
                             rule: 'email',
-                            errorMessage: 'Введите корректный email',
                         },
                         {
                             rule: 'required',
-                            errorMessage: 'Поле обязательно для заполнения',
                         },
-                    ], {
-                        errorsContainer: errorElement,
-                    });
+                    ]);
+                })
+            }
+
+            if (form.querySelector('input[type="tel"]')) {
+                const allEmailFields = form.querySelectorAll('input[type="tel"]')
+
+                allEmailFields.forEach((item) => {
+                    validation.addField(item, [
+                        {
+                            rule: 'customRegexp',
+                            value: /^((8|\+7)[\-\s]?)?(\(?\d{3}\)?[\-\s]?)?[\d\-\s]{7,10}$/
+,
+                        },
+                        {
+                            rule: 'required',
+                        },
+                    ]);
+                })
+            }
+
+            if (form.querySelector('input[data-agreement]')) {
+                const allEmailFields = form.querySelectorAll('input[data-agreement]')
+
+                allEmailFields.forEach((item) => {
+                    validation.addField(item, [
+                        {
+                            rule: 'required',
+                        },
+                    ]);
                 })
             }
 
@@ -61,4 +84,4 @@ import JustValidate from "just-validate";
             });
         });
     }
-})
+}())

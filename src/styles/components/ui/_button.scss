@@ -19,13 +19,19 @@
 		font-size: 14px;
 	}
 
-	&:focus-visible {
+	&:disabled {
+		color: var(--color-orange-100);
+		background-color: var(--color-orange-200);
+		cursor: default;
+	}
+
+	&:focus-visible:not(:disabled) {
 		border-color: var(--color-orange-200);
 		color: var(--color-blue-300);
 	}
 
 	@media (any-hover: hover) {
-		&:hover {
+		&:hover:not(:disabled) {
 			border-color: var(--color-orange-200);
 			color: var(--color-orange-500);
 			background-color: var(--color-white);
@@ -41,7 +47,7 @@
 		color: var(--color-blue-300);
 		background-color: transparent;
 
-		&:focus-visible {
+		&:focus-visible:not(:disabled) {
 			border-color: var(--color-blue-300);
 			background-color: var(--color-white);
 		}
@@ -55,7 +61,7 @@
 		color: var(--color-blue-300);
 		background-color: var(--color-white);
 
-		&:focus-visible {
+		&:focus-visible:not(:disabled) {
 			border-color: var(--color-blue-300);
 		}
 	}

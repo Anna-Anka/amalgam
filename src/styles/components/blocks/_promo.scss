@@ -79,16 +79,6 @@
 			&--checkbox {
 				color: var(--color-orange-100);
 
-				@media (any-hover: hover) {
-					&:hover {
-						.form__visible {
-							&:not(:focus, :checked) {
-								border-color: var(--color-blue-70);
-							}
-						}
-					}
-				}
-
 				a {
 					color: var(--color-white);
 

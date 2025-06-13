@@ -7,7 +7,11 @@
 
 @include('./components/blocks/_header.html')
 @include('./components/blocks/_cookie.html')
-@include('./components/blocks/modals/_modal.html')
+
+<div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_modal-thank.html')
+</div>
 
 <h1 class="sr-only">Быстровозводимые здания</h1>
 <div class="main">

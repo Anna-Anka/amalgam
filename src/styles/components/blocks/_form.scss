@@ -55,10 +55,8 @@
 
 			@media (any-hover: hover) {
 				&:hover {
-					.form__visible {
-						&:not(:focus):not(:checked) {
-							border-color: var(--color-blue-70);
-						}
+					.form__hidden:not(:focus, :checked) + .form__visible {
+						border-color: var(--color-blue-70);
 					}
 				}
 			}
@@ -77,7 +75,7 @@
 
 				@media (any-hover: hover) {
 					&:hover {
-						text-decoration-color: currentColor;
+						text-decoration-color: currentcolor;
 					}
 				}
 			}
@@ -145,20 +143,24 @@
 			transition: color 0.3s;
 		}
 
-		&:focus-visible {
+		&:focus-visible:not(&--error) {
 			border-color: var(--color-orange-500);
 		}
 
 		@media (any-hover: hover) {
-			&:hover {
-				&:not(:focus) {
-					border-color: var(--color-blue-70);
-				}
+			&:hover:not(:focus, &--error) {
+				border-color: var(--color-blue-70);
 
 				&::placeholder {
 					color: var(--color-blue-200);
 				}
 			}
+		}
+
+		&--error {
+			border-color: var(--color-red-500) !important;
+			color: var(--color-red-500) !important;
+			background-color: var(--color-red-100) !important;
 		}
 	}
 
@@ -218,5 +220,9 @@
 		margin-top: 0;
 		font-style: normal;
 		color: var(--color-orange-100);
+	}
+
+	.just-validate-error-label {
+		display: none;
 	}
 }

@@ -4,23 +4,23 @@
             <h2 class="promo__title">
                 Оставьте заяку и наш специалист оперативно с вами свяжется
             </h2>
-            <form class="form">
+            <form class="form" data-form-validate>
                 <div class="form__items form__items--large">
                     <div class="form__item">
                         <label class="sr-only" for="@name-id">Введите ваше имя</label>
-                        <input class="form__field" id="@name-id" name="name" type="text" placeholder="Ваше имя" required>
+                        <input class="form__field" id="@name-id" name="name" type="text" placeholder="Ваше имя" autocomplete="given-name">
                     </div>
                     <div class="form__item">
                         <label class="sr-only" for="@phone-id">
                             Введите ваш номер телефона
                         </label>
-                        <input class="form__field" id="@phone-id" name="phone" type="tel" placeholder="Ваш телефон" required>
+                        <input class="form__field" id="@phone-id" name="phone" type="tel" placeholder="Ваш телефон *" autocomplete="tel">
                     </div>
                     <div class="form__item">
                         <label class="sr-only" for="@email-id">
                             Введите вашу электронную почту
                         </label>
-                        <input class="form__field" id="@email-id" name="email" type="email" placeholder="Ваш email" required>
+                        <input class="form__field" id="@email-id" name="email" type="email" placeholder="Ваш email *" autocomplete="email">
                     </div>
                     @if(typeof fileId !== 'undefined' && fileId) {
                     <div class="form__item">
@@ -31,18 +31,18 @@
                     </div>
                     }
                 </div>
-                <button class="form__button button button--light" type="submit">
+                <button class="form__button button button--light" type="submit" disabled>
                     Отправить
                 </button>
                 <label class="form__item form__item--checkbox">
-                    <input class="form__hidden" type="checkbox" name="police" value="true" required>
+                    <input class="form__hidden" type="checkbox" name="police" value="true" data-agreement>
                     <span class="form__visible" aria-hidden="true"></span>
                     <span>
                         Я подтверждаю ознакомление <a href="https://a-gama.ru/privacy-policy/" target="_blank">с Политикой конфиденциальности</a> и даю согласие на обработку персональных данных
                     </span>
                 </label>
                 <label class="form__item form__item--checkbox">
-                    <input class="form__hidden" type="checkbox" name="advertising" value="true" required>
+                    <input class="form__hidden" type="checkbox" name="advertising" value="true" data-agreement>
                     <span class="form__visible" aria-hidden="true"></span>
                     <span>
                         Я даю согласие на получение <a href="https://a-gama.pro/soglasie" target="_blank">информационных и рекламных материалов</a>

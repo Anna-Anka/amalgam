@@ -6,7 +6,12 @@
 })
 
 @include('./components/blocks/_header.html')
-@include('./components/blocks/modals/_modal.html')
+@include('./components/blocks/_cookie.html')
+
+<div class="graph-modal">
+    @include('./components/blocks/modals/_modal.html')
+    @include('./components/blocks/modals/_modal-thank.html')
+</div>
 
 <div class="main">
     @include('./pages/about-page/_about-hero.html')
