@@ -4226,6 +4226,32 @@ body {
   gap: 4px;
 }
 
+.form .webform-field-upload-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--color-white);
+}
+
+.form .webform-field-upload-list a.upload-file-name {
+  margin: 0;
+  margin-right: auto;
+  color: var(--color-white);
+}
+
+.form .webform-field-upload-list .upload-file-size {
+  color: var(--color-orange-100);
+}
+
+.form .webform-field-upload-list .webform-field-item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form .webform-field-upload-list del {
+  color: var(--color-orange-100);
+}
+
 .form .webform-field-upload {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
@@ -4246,35 +4272,9 @@ body {
   color: var(--color-orange-200);
 }
 
-.form .webform-field-upload .webform-field-upload-notice {
+.form .webform-field-upload-notice {
   margin-top: 0;
   font-style: normal;
-  color: var(--color-orange-100);
-}
-
-.form .webform-field-upload .webform-field-upload-list {
-  margin: 0;
-  padding-left: 20px;
-  color: var(--color-white);
-}
-
-.form .webform-field-upload .webform-field-upload-list a.upload-file-name {
-  margin: 0;
-  margin-right: auto;
-  color: var(--color-white);
-}
-
-.form .webform-field-upload .webform-field-upload-list .upload-file-size {
-  color: var(--color-orange-100);
-}
-
-.form .webform-field-upload .webform-field-upload-list .webform-field-item-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.form .webform-field-upload .webform-field-upload-list del {
   color: var(--color-orange-100);
 }
 

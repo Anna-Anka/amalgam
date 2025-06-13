@@ -172,6 +172,30 @@
 		@include flex-simple(4px, column);
 	}
 
+	.webform-field-upload-list {
+		margin: 0;
+		padding-left: 20px;
+		color: var(--color-white);
+
+		a.upload-file-name {
+			margin: 0;
+			margin-right: auto;
+			color: var(--color-white);
+		}
+
+		.upload-file-size {
+			color: var(--color-orange-100);
+		}
+
+		.webform-field-item-wrap {
+			display: flex;
+		}
+
+		del {
+			color: var(--color-orange-100);
+		}
+	}
+
 	.webform-field-upload {
 		order: -1;
 		border-color: var(--color-orange-200);
@@ -188,35 +212,11 @@
 			line-height: 1.2;
 			color: var(--color-orange-200);
 		}
+	}
 
-		.webform-field-upload-notice {
-			margin-top: 0;
-			font-style: normal;
-			color: var(--color-orange-100);
-		}
-
-		.webform-field-upload-list {
-			margin: 0;
-			padding-left: 20px;
-			color: var(--color-white);
-
-			a.upload-file-name {
-				margin: 0;
-				margin-right: auto;
-				color: var(--color-white);
-			}
-
-			.upload-file-size {
-				color: var(--color-orange-100);
-			}
-
-			.webform-field-item-wrap {
-				display: flex;
-			}
-
-			del {
-				color: var(--color-orange-100);
-			}
-		}
+	.webform-field-upload-notice {
+		margin-top: 0;
+		font-style: normal;
+		color: var(--color-orange-100);
 	}
 }
