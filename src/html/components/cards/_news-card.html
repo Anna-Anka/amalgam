@@ -1,9 +1,18 @@
 <article class="news-card">
-    <time class="news-card__date" datetime="@datetime">@date</time>
-    <h3 class="news-card__title subtitle">
-        <a href="#">@title</a>
-    </h3>
-    <div class="news-card__text">
-        @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+    <div class="news-card__content">
+        <time class="news-card__date" datetime="@datetime">@date</time>
+        <h3 class="news-card__title subtitle">
+            <a href="#">@title</a>
+        </h3>
+        <div class="news-card__text">
+            @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+        </div>
+    </div>
+    <div class="news-card__picture">
+        <picture>
+            <source srcset="img/blocks/news/@img.avif 1x, img/blocks/news/@img@2x.avif 2x" type="image/avif">
+            <source srcset="img/blocks/news/@img.webp 1x, img/blocks/news/@img@2x.webp 2x" type="image/webp">
+            <img class="news-card__img" src="img/blocks/news/@img.jpg" srcset="img/blocks/news/@img@2x.jpg 2x" alt="@alt" loading="lazy">
+        </picture>
     </div>
 </article>

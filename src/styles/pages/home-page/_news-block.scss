@@ -35,19 +35,23 @@
 		@include flex-alignment(30px, space-between, flex-start);
 
 		@include mq(lg) {
-			flex-direction: column-reverse;
+			flex-direction: column;
 		}
 	}
 
 	&__video {
 		@include resize-video(57%);
 
+		align-self: stretch;
 		border-radius: 20px;
+		padding-bottom: 31%;
 		width: 100%;
+		max-width: 654px;
 
-		@include mq(lg, min) {
-			padding-bottom: 28%;
-			max-width: 654px;
+		@include mq(lg) {
+			@include resize-video(57%);
+
+			max-width: 100%;
 		}
 	}
 
@@ -57,7 +61,7 @@
 		width: 100%;
 
 		@include mq(lg, min) {
-			max-width: 584px;
+			max-width: 655px;
 		}
 	}
 

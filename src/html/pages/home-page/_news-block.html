@@ -12,19 +12,15 @@
             </a>
         </div>
         <div class="news-block__wrapper">
-            <div class="news-block__video">
-                <video poster="assets/videos/poster@2x.jpg" controls>
-                    <source src="assets/videos/about.mp4" type="video/mp4">
-                    <source src="assets/videos/about.webm" type="video/webm">
-                </video>
-            </div>
             <ul class="news-block__items">
                 <li class="news-block__item">
                     @include('../../components/cards/_news-card.html', {
                     'datetime': '2024-11-01',
                     'date': '1.11.2024',
                     'title': 'Амальгама на премии «Золотой Меркурий»',
-                    'text': ['Компания “Амальгама” достигла значительного успеха в сфере строительного бизнеса Новосибирской области.']
+                    'text': ['Компания “Амальгама” достигла значительного успеха в сфере строительного бизнеса Новосибирской области.'],
+                    'img': '1',
+                    'alt': '«Золотой Меркурий»',
                     })
                 </li>
                 <li class="news-block__item">
@@ -32,18 +28,18 @@
                     'datetime': '2024-11-01',
                     'date': '1.11.2024',
                     'title': 'Амальгама на KAZBUILD',
-                    'text': ['Компания “Амальгама” достигла значительного успеха в сфере строительного бизнеса Новосибирской области.']
-                    })
-                </li>
-                <li class="news-block__item">
-                    @include('../../components/cards/_news-card.html', {
-                    'datetime': '2024-11-01',
-                    'date': '1.11.2024',
-                    'title': 'Амальгама на KAZBUILD',
-                    'text': ['Компания “Амальгама” достигла значительного успеха в сфере строительного бизнеса Новосибирской области.']
+                    'text': ['Компания “Амальгама” достигла значительного успеха в сфере строительного бизнеса Новосибирской области.'],
+                    'img': '1',
+                    'alt': 'KAZBUILD',
                     })
                 </li>
             </ul>
+            <div class="news-block__video">
+                <video poster="assets/videos/poster@2x.jpg" controls>
+                    <source src="assets/videos/about.mp4" type="video/mp4">
+                    <source src="assets/videos/about.webm" type="video/webm">
+                </video>
+            </div>
         </div>
     </div>
 </section>
