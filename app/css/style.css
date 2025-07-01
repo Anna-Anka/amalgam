@@ -4622,6 +4622,7 @@ body {
 }
 
 .realized-projects__item {
+  padding: 1px;
   height: auto;
 }
 
@@ -5522,6 +5523,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--color-white);
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .realize-card__image {
@@ -9182,6 +9187,11 @@ body {
   .direction-card__link:hover {
     color: var(--color-white);
     background-color: var(--color-orange-500);
+  }
+
+  .realize-card:hover {
+    -webkit-box-shadow: 0 0 0 1px var(--color-orange-500);
+    box-shadow: 0 0 0 1px var(--color-orange-500);
   }
 
   .realize-card__title a:hover {
