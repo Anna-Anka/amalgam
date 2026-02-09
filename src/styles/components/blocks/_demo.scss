@@ -10,4 +10,34 @@
 			grid-template-columns: 1fr;
 		}
 	}
+
+	.demo-card {
+		@include mq(sm) {
+			display: grid;
+			grid-template-columns: 38% 62%;
+			gap: 10px;
+		}
+
+		&__image {
+			@include mq(sm) {
+				margin-bottom: 0;
+				padding-bottom: 25%;
+			}
+		}
+
+		&__title {
+			@include mq(sm) {
+				align-self: flex-end;
+				order: -1;
+				margin-bottom: 0;
+			}
+		}
+
+		&__text {
+			@include mq(sm) {
+				grid-column: 1 / -1;
+				// flex: 1 0 100%;
+			}
+		}
+	}
 }
