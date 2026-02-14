@@ -14,19 +14,22 @@
 		}
 	}
 
-	@include mq(sm) {
-		flex-direction: column;
+	@include mq(lg) {
+		flex-direction: row-reverse;
+		padding: 20px;
 	}
 
 	&__content {
 		padding: 20px 10px 20px 20px;
+
+		@include mq(lg) {
+			padding: 0 0 0 10px;
+		}
 	}
 
 	&__content,
 	&__picture {
-		@include mq(sm, min) {
-			width: 50%;
-		}
+		width: 50%;
 	}
 
 	&__date {
@@ -75,10 +78,6 @@
 		@include resize-picture(30%);
 
 		border-radius: 8px;
-
-		@include mq(lg) {
-			padding-bottom: 25%;
-		}
 
 		@include mq(sm) {
 			padding-bottom: 50%;

@@ -26,6 +26,20 @@
 			width: 100%;
 		}
 
+		&--desktop {
+			@include mq(md) {
+				display: none;
+			}
+		}
+
+		&--mobile {
+			display: none;
+
+			@include mq(md) {
+				display: flex;
+			}
+		}
+
 		svg {
 			color: var(--color-orange-200);
 		}
@@ -36,6 +50,10 @@
 
 		@include mq(lg) {
 			flex-direction: column;
+		}
+
+		@include mq(md) {
+			margin-bottom: 20px;
 		}
 	}
 
