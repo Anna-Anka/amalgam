@@ -2,17 +2,22 @@
 	@include bg-properties;
 
 	position: relative;
+	display: flex;
 	padding: 80px 0 160px;
 	min-height: calc(var(--full-screen) - var(--header-height));
 	color: var(--color-white);
 
 	@include mq(lg) {
-		padding: 50px 0;
+		padding: 30px 0;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
 	}
 
 	&::before {
-		content: '';
-		position: absolute;
 		inset: 0;
 		background-image: linear-gradient(
 			331.78deg,
@@ -21,29 +26,27 @@
 		);
 	}
 
+	&::after {
+		bottom: 0;
+		width: 100%;
+		height: 50%;
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+		opacity: 0;
+
+		@include mq(lg) {
+			opacity: 1;
+		}
+	}
+
 	&__container {
 		position: relative;
 		z-index: 1;
-
-		&--buttons {
-			position: absolute;
-			left: 50%;
-			bottom: 80px;
-			transform: translate(-50%);
-
-			@include mq(lg) {
-				bottom: 50px;
-			}
-
-			@include mq(md) {
-				bottom: 28px;
-			}
-		}
 	}
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+		height: 100%;
 		gap: 30px;
 
 		@include mq(lg) {
@@ -93,13 +96,49 @@
 		}
 	}
 
-	.form {
-		&__field {
-			color: var(--color-blue-300);
+	&__mobile {
+		display: none;
+
+		@include mq(lg) {
+			@include flex-simple(10px, column);
+		}
+	}
+
+	&__sub {
+		@include flex-simple(10px, column);
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		color: var(--color-white);
+	}
+
+	&__accent {
+		color: var(--color-orange-500);
+	}
+
+	&__btn {
+		align-self: self-start;
+
+		@include mq(sm) {
+			align-self: auto;
 		}
 
-		@include mq(sm, min) {
-			max-width: 345px;
+		span {
+			@include line-clamp(1);
+		}
+	}
+
+	.form {
+		align-self: flex-start;
+		max-width: 345px;
+
+		@include mq(lg) {
+			display: none;
+		}
+
+		&__field {
+			color: var(--color-blue-300);
 		}
 	}
 }

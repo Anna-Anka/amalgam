@@ -6,14 +6,30 @@
 	.hero {
 		height: auto;
 
-		@include mq(lg) {
-			padding-bottom: 100px;
+		&__sub {
+			max-width: calc(100% - 121px);
 		}
 	}
 
 	&__buttons {
+		position: absolute;
+		left: 50%;
+		bottom: 80px;
+		z-index: 1;
 		display: flex;
+		transform: translate(-50%);
 		gap: 15px;
+
+		@include mq(lg) {
+			left: unset;
+			right: 15px;
+			bottom: 80px;
+			margin: 0;
+			padding: 0;
+			width: auto;
+			max-width: 100%;
+			transform: none;
+		}
 	}
 
 	&__button {
